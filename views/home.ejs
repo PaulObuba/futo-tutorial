@@ -4,22 +4,77 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <!-- Font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <title>FUTO</title>
   </head>
+
   <body>
-    <table style="width: 100%;">
-      <tr>
-        <th>head 1</th>
-        <th>head 2</th>
-        <th>head 3</th>
-        <th>head 4</th>
+    <!-- Login Section -->
+    <!-- <section class="login">
+    <div class="login-logo">
+      <img src="/images/logo.png" alt="login-logo" />
+    </div>
+
+    <form>
+      <div class="input">
+        <input type="text" id="user" placeholder="User" />
+        <i class="fa fa-user"></i>
+      </div>
+      <div class="input">
+        <input type="password" id="password" placeholder="Password" />
+        <i class="fa fa-eye-slash"></i>
+      </div>
+      <p>Forgot Password ?</p>
+      <input type="button" value="Login" class="login-btn" />
+    </form>
+  </section> -->
+
+    <table style="width: 100%; text-align: center">
+      <tr style="padding: 2rem">
+        <th>Head</th>
+        <th>Head</th>
+        <th>Head</th>
+        <th>Head</th>
       </tr>
-      <tr>
-        <td>data 1</td>
-        <td>data 2</td>
-        <td>data 3</td>
-        <td>data 4</td>
-      </tr>
+
+        <% users.forEach(function(user){ %>
+          <tr>
+          <td><%- user.name %></td>
+        </tr>
+        <% }); %>
+ 
+
+
     </table>
+
+    <script>
+      // Password Toggler
+      let eye = document.querySelector(".fa-eye-slash");
+      let password = document.getElementById("password");
+
+      eye.onclick = () => {
+        eye.classList.toggle("fa-eye");
+        if (eye.classList.contains("fa-eye")) {
+          password.type = "text";
+        } else {
+          password.type = "password";
+        }
+      };
+
+      console.log(users);
+    </script>
   </body>
 </html>

@@ -1,0 +1,112 @@
+
+.login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      228deg,
+      rgba(0, 166, 255, 0.55),
+      hsla(240, 100%, 20%, 0.8)
+    ),
+    url("https://www.businesslist.com.ng/img/ng/f/1537812970-96-federal-university-of-technology-owerri.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.login .login-logo img {
+  width: 15rem;
+  margin-top: 5rem;
+}
+
+.login form {
+  width: 20rem;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.login form .input {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+}
+
+.login form .input:nth-child(2) {
+  margin-bottom: 0.7rem;
+}
+
+.login form .input input {
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0.8rem;
+}
+
+.login form .input #password {
+  margin-bottom: 0;
+}
+
+.login form .input i {
+  color: var(--text-black-900);
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.login form p {
+  position: relative;
+
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--bg-black-900);
+  margin-bottom: 3rem;
+  cursor: pointer;
+}
+
+.login form p::after {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0.1rem;
+  border-radius: 2px;
+  background-color: var(--prim-color);
+  transition: all 0.25s ease-in-out;
+}
+
+.login form p:hover::after {
+  width: 7rem;
+}
+
+.login form .login-btn {
+  color: var(--text-black-900);
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  background-color: var(--bg-black-900);
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.login form .login-btn:hover {
+  color: green;
+
+  background-color: var(--light-white);
+  transform: scaleX(0.6);
+}

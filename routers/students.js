@@ -1,30 +1,34 @@
 const express = require("express");
 const router = express.Router();
 
-const { Login } = require("../models/login");
+const { Students } = require("../models/students");
 
+// Get Data
 router.get("/", async (req, res) => {
-  const users = await Login.find();
+  const students = await Students.find();
 
-  if (!users) {
+  if (!students) {
     res.status(500).json({ success: false });
   }
+  res.render('students', { students });
 
-  res.render("home", { users });
-  // res.send(users)
+  // res.send(students);
 });
 
+// Post Data
 router.post("/", (req, res) => {
-  const user = new Login({
+  const student = new Students({
+    title: req.body.title,
     name: req.body.name,
+    description: req.body.description,
     image: req.body.image,
-    church: req.body.church,
+    links: req.body.links,
   });
 
-  user
+  student
     .save()
-    .then((loginUser) => {
-      res.status(201).json(loginUser);
+    .then((student) => {
+      res.status(201).json(student);
     })
     .catch((err) => {
       res.status(500).json({

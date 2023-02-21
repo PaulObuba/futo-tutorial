@@ -1,32 +1,30 @@
 const express = require("express");
 const router = express.Router();
 
-const { Events } = require("../models/event");
+const { Courses } = require("../models/courses");
 
-// Get Request
 router.get("/", async (req, res) => {
-  const events = await Events.find();
+  const courses = await Courses.find();
 
-  if (!events) {
+  if (!courses) {
     res.status(500).json({ success: false });
   }
 
-  res.send(events);
+   res.render("courses", { courses })
+  // res.send(courses);
 });
 
-// Post Data
-router.post("/", async (req, res) => {
-  const events = new Events({
+router.post("/courses", async (req, res) => {
+  const course = new Courses({
     title: req.body.title,
-    date: req.body.date,
     description: req.body.description,
     image: req.body.image,
   });
 
-  events
+  course
     .save()
-    .then((event) => {
-      res.status(201).json(event);
+    .then((course) => {
+      res.status(201).json(course);
     })
     .catch((err) => {
       res.status(500).json({
@@ -35,3 +33,5 @@ router.post("/", async (req, res) => {
       });
     });
 });
+
+module.exports = router;
