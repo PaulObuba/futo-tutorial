@@ -3,6 +3,7 @@ const router = express.Router();
 
 const { Courses } = require("../models/courses");
 
+// Get Data
 router.get("/", async (req, res) => {
   const courses = await Courses.find();
 
@@ -10,10 +11,11 @@ router.get("/", async (req, res) => {
     res.status(500).json({ success: false });
   }
 
-   res.render("courses", { courses })
+  res.render("courses", { courses });
   // res.send(courses);
 });
 
+// Post Data
 router.post("/courses", async (req, res) => {
   const course = new Courses({
     title: req.body.title,
@@ -32,6 +34,20 @@ router.post("/courses", async (req, res) => {
         success: false,
       });
     });
+});
+
+
+// Delete Data
+router.get("/delete/:id", (req, res, next) => {
+  Courses.findByIdAndDelete({ _id: req.params.id }, (err, docs) => {
+    if (err) {
+      console.log("Something went wrong in deleting data");
+      next(err);
+    } else {
+      console.log("Deleted Successfully");
+      res.redirect("/")
+    }
+  });
 });
 
 module.exports = router;

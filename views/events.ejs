@@ -25,6 +25,11 @@
   <div class="main-container">
     <!-- LEFT SECTION STARTS -->
     <div class="left-section">
+      
+      <div class="nav-toggler">
+        <span></span>
+      </div>
+
       <div class="title">
         <a><span>A</span>dmin</a>
       </div>
@@ -42,7 +47,7 @@
             </a>
           </li>
           <li>
-            <a href="/events" class="active"> <i class="fa fa-list"></i> Events </a>
+            <a href="/events" class="active"> <i class="fa fa-list" onclick="rightSectionTogglerBtn()"></i> Events </a>
           </li>
           <li>
             <a href="/students">
@@ -117,43 +122,50 @@
           </div>
         </div>
         <!-- Add course Popup ends -->
-
+        
+       <div style="overflow-x:auto;">
         <table>
-          <tr>
-            <th>S/N</th>
-            <th>Image</th>
-            <th>Title</th>
-            <th>Date</th>
-            <th>Description</th>
-            <th>Action</th>
-          </tr>
-
-          <% events.forEach((event, index)=> { %>
-            <tr>
-              <td>
-                <%- index %>
-              </td>
-              <td>
-                <%- event.image %>
-              </td>
-              <td>
-                <%- event.title %>
-              </td>
-              <td>
-                <%- event.date %>
-              </td>
-              <td>
-                <%- event.description %>
-              </td>
-              <td>
-                <i class="fa-solid fa-eye"></i>
-                <i class="fa-solid fa-pen"></i>
-                <i class="fa-solid fa-trash-can"></i>
-              </td>
-            </tr>
-            <% }) %>
-
-        </table>
+          <thead>
+           <tr>
+             <th>S/N</th>
+             <th>Image</th>
+             <th>Title</th>
+             <th>Date</th>
+             <th>Description</th>
+             <th>Action</th>
+           </tr>
+          </thead>
+ 
+          <tbody>
+           <% events.forEach((event, index)=> { %>
+             <tr>
+               <td>
+                 <%- index %>
+               </td>
+               <td>
+                 <%- event.image %>
+               </td>
+               <td>
+                 <%- event.title %>
+               </td>
+               <td>
+                 <%- event.date %>
+               </td>
+               <td>
+                 <%- event.description %>
+               </td>
+               <td>
+                 <i class="fa-solid fa-eye"></i>
+                 <i class="fa-solid fa-pen"></i>
+                 <i class="fa-solid fa-trash-can"></i>
+               </td>
+             </tr>
+             <% }) %>
+ 
+          </tbody>
+         </table>
+       </div>
+    
       </div>
     </div>
   </div>

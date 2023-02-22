@@ -26,6 +26,11 @@
 
     <!-- LEFT SECTION STARTS -->
     <div class="left-section">
+
+      <div class="nav-toggler">
+        <span></span>
+      </div>
+
       <div class="title">
         <a><span>A</span>dmin</a>
       </div>
@@ -119,38 +124,44 @@
         </div>
         <!-- Add course Popup ends -->
 
-        <table>
-          <tr>
-            <th>S/N</th>
-            <th>Title</th>
-            <th>Sub-Title</th>
-            <th>Information</th>
-            <th> Action </th>
-          </tr>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>S/N</th>
+                <th>Title</th>
+                <th>Subtitle</th>
+                <th>Information</th>
+                <th> Action </th>
+              </tr>
+            </thead>
 
-          <% notifications.forEach((notification, index)=> { %>
-            <tr>
-              <td>
-                <%- index %>
-              </td>
-              <td>
-                <%- notification.title %>
-              </td>
-              <td>
-                <%- notification.subTitle %>
-              </td>
-              <td>
-                <%- notification.info %>
-              </td>
-              <td>
-                <i class="fa-solid fa-eye"></i>
-                <i class="fa-solid fa-pen"></i>
-                <i class="fa-solid fa-trash-can"></i>
-              </td>
-            </tr>
-            <% }) %>
+            <tbody>
+              <% notifications.forEach((notification, index)=> { %>
+                <tr>
+                  <td>
+                    <%- index %>
+                  </td>
+                  <td>
+                    <%- notification.title %>
+                  </td>
+                  <td>
+                    <%- notification.subTitle %>
+                  </td>
+                  <td>
+                    <%- notification.info %>
+                  </td>
+                  <td>
+                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-pen"></i>
+                    <i class="fa-solid fa-trash-can"></i>
+                  </td>
+                </tr>
+                <% }) %>
+            </tbody>
 
-        </table>
+          </table>
+        </div>
       </div>
     </div>
   </div>
