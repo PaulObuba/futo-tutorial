@@ -38,12 +38,12 @@
         <div class="nav">
           <ul>
             <li>
-              <a href="./admin" class="active">
+              <a href="./admin">
                 <i class="fa fa-home"></i> Home
               </a>
             </li>
             <li>
-              <a href="/courses">
+              <a href="/courses" class="active">
                 <i class="fa-brands fa-discourse"></i> Courses
               </a>
             </li>
@@ -124,6 +124,7 @@
                         id="defaultForm-file"
                         class="form-control validate"
                         name="image"
+                        required
                       />
                     </div>
 
@@ -139,6 +140,7 @@
                         id="defaultForm-email"
                         class="form-control validate"
                         name="title"
+                        required
                       />
                     </div>
 
@@ -154,6 +156,7 @@
                         id="defaultForm-pass"
                         class="form-control validate"
                         name="description"
+                        required
                       /></textarea>
                     </div>
                   </div>
@@ -177,43 +180,10 @@
             <tr>
               <th>S/N</th>
               <th>Image</th>
-              <th>Title</th>
+              <th>Name</th>
               <th>Description</th>
               <th>Action</th>
             </tr>
-            <!-- <tr>
-              <td>1</td>
-              <td><img src="./images/logo.png" /></td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
-              <td>
-                <i class="fa-solid fa-eye"></i>
-                <i class="fa-solid fa-pen"></i>
-                <i class="fa-solid fa-trash-can"></i>
-              </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td><img src="./images/logo.png" /></td>
-              <td>Francisco Chang</td>
-              <td>Mexico</td>
-              <td>
-                <i class="fa-solid fa-eye"></i>
-                <i class="fa-solid fa-pen"></i>
-                <i class="fa-solid fa-trash-can"></i>
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td><img src="./images/logo.png" /></td>
-              <td>Giovanni Rovelli</td>
-              <td>Italy</td>
-              <td>
-                <i class="fa-solid fa-eye"></i>
-                <i class="fa-solid fa-pen"></i>
-                <i class="fa-solid fa-trash-can"></i>
-              </td>
-            </tr> -->
 
             <% courses.forEach((course, index) => { %>
              <tr>
@@ -251,5 +221,9 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    
+    <!-- Coustom JS link -->
+    <script src="/js/script.js"></script>
   </body>
 </html>

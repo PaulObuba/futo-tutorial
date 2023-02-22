@@ -38,7 +38,7 @@
         <div class="nav">
           <ul>
             <li>
-              <a href="./admin" class="active">
+              <a href="./admin">
                 <i class="fa fa-home"></i> Home
               </a>
             </li>
@@ -48,7 +48,7 @@
               </a>
             </li>
             <li>
-              <a href="/events"> <i class="fa fa-list"></i> Events </a>
+              <a href="/events" class="active"> <i class="fa fa-list"></i> Events </a>
             </li>
             <li>
               <a href="/students">
@@ -114,12 +114,13 @@
                       data-error="wrong"
                       data-success="right"
                       for="defaultForm-email"
-                      >Name:</label
+                      >Image:</label
                     >
                     <input
                       type="file"
                       id="defaultForm-file"
                       class="form-control validate"
+                      required
                     />
                   </div>
 
@@ -131,9 +132,10 @@
                       >Name:</label
                     >
                     <input
-                      type="email"
+                      type="text"
                       id="defaultForm-email"
                       class="form-control validate"
+                      required
                     />
                   </div>
 
@@ -148,6 +150,7 @@
                       type="date"
                       id="defaultForm-pass"
                       class="form-control validate"
+                      required
                     />
                   </div>
 
@@ -158,21 +161,22 @@
                       for="defaultForm-pass"
                       >Description:</label
                     >
-                    <input
-                      type="password"
+                    <textarea
+                      type="text"
                       id="defaultForm-pass"
                       class="form-control validate"
-                    />
+                      required
+                    /></textarea>
                   </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
-                  <button
+                  <input
                     class="btn"
                     data-toggle="modal"
                     data-target="#modalLoginForm"
-                  >
-                    Add
-                  </button>
+                    type="submit"
+                    value="Add"
+                  />
                 </div>
               </div>
             </div>
@@ -226,5 +230,8 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Coustom JS link -->
+    <script src="/js/script.js"></script>
   </body>
 </html>

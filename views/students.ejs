@@ -38,7 +38,7 @@
         <div class="nav">
           <ul>
             <li>
-              <a href="./admin" class="active">
+              <a href="./admin">
                 <i class="fa fa-home"></i> Home
               </a>
             </li>
@@ -51,7 +51,7 @@
               <a href="/events"> <i class="fa fa-list"></i> Events </a>
             </li>
             <li>
-              <a href="/students">
+              <a href="/students" class="active">
                 <i class="fa-sharp fa-solid fa-street-view"></i> Students
               </a>
             </li>
@@ -116,12 +116,28 @@
                       data-error="wrong"
                       data-success="right"
                       for="defaultForm-email"
-                      >Name:</label
+                      >Image:</label
                     >
                     <input
                       type="file"
                       id="defaultForm-file"
                       class="form-control validate"
+                      required
+                    />
+                  </div>
+
+                  <div class="md-form mb-3">
+                    <label
+                      data-error="wrong"
+                      data-success="right"
+                      for="defaultForm-email"
+                      >Title:</label
+                    >
+                    <input
+                      type="text"
+                      id="defaultForm-email"
+                      class="form-control validate"
+                      required
                     />
                   </div>
 
@@ -133,9 +149,10 @@
                       >Name:</label
                     >
                     <input
-                      type="email"
+                      type="text"
                       id="defaultForm-email"
                       class="form-control validate"
+                      required
                     />
                   </div>
 
@@ -147,20 +164,35 @@
                       >Description:</label
                     >
                     <input
-                      type="password"
+                      type="text"
+                      id="defaultForm-pass"
+                      class="form-control validate"
+                      required
+                    />
+                  </div>
+
+                  <div class="md-form mb-4">
+                    <label
+                      data-error="wrong"
+                      data-success="right"
+                      for="defaultForm-pass"
+                      >Social links:</label
+                    >
+                    <input
+                      type="text"
                       id="defaultForm-pass"
                       class="form-control validate"
                     />
                   </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
-                  <button
+                  <input
                     class="btn"
                     data-toggle="modal"
                     data-target="#modalLoginForm"
-                  >
-                    Add
-                  </button>
+                    value="Add"
+                    type="submit"
+                  />
                 </div>
               </div>
             </div>
@@ -172,42 +204,27 @@
               <th>S/N</th>
               <th>Image</th>
               <th>Title</th>
+              <th>Name</th>
               <th>Description</th>
+              <th>Scocila links</th>
               <th>Action</th>
             </tr>
+
+            <% students.forEach((student, index) => { %>
             <tr>
-              <td>1</td>
-              <td><img src="./images/logo.png" /></td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
+              <td><%- index %></td>
+              <td><%- student.image %></td>
+              <td><%- student.title %></td>
+              <td><%- student.name %></td>
+              <td><%- student.description %></td>
+              <td><%- student.links[0] %></td>
               <td>
                 <i class="fa-solid fa-eye"></i>
                 <i class="fa-solid fa-pen"></i>
                 <i class="fa-solid fa-trash-can"></i>
               </td>
             </tr>
-            <tr>
-              <td>2</td>
-              <td><img src="./images/logo.png" /></td>
-              <td>Francisco Chang</td>
-              <td>Mexico</td>
-              <td>
-                <i class="fa-solid fa-eye"></i>
-                <i class="fa-solid fa-pen"></i>
-                <i class="fa-solid fa-trash-can"></i>
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td><img src="./images/logo.png" /></td>
-              <td>Giovanni Rovelli</td>
-              <td>Italy</td>
-              <td>
-                <i class="fa-solid fa-eye"></i>
-                <i class="fa-solid fa-pen"></i>
-                <i class="fa-solid fa-trash-can"></i>
-              </td>
-            </tr>
+            <% }) %>
           </table>
         </div>
       </div>
@@ -230,5 +247,9 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    
+    <!-- Coustom JS link -->
+    <script src="/js/script.js"></script>
   </body>
 </html>

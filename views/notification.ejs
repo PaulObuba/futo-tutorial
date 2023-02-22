@@ -39,7 +39,7 @@
         <div class="nav">
           <ul>
             <li>
-              <a href="./admin" class="active">
+              <a href="./admin">
                 <i class="fa fa-home"></i> Home
               </a>
             </li>
@@ -64,7 +64,7 @@
               </a>
             </li>
             <li>
-              <a href="/notification">
+              <a href="/notification" class="active">
                 <i class="fa-solid fa-bell"></i> Notification
               </a>
             </li>
@@ -120,7 +120,22 @@
                       data-error="wrong"
                       data-success="right"
                       for="defaultForm-email"
-                      >Name:</label
+                      >Ttile:</label
+                    >
+                    <input
+                      type="email"
+                      id="defaultForm-email"
+                      class="form-control validate"
+                      required
+                    />
+                  </div>
+
+                  <div class="md-form mb-3">
+                    <label
+                      data-error="wrong"
+                      data-success="right"
+                      for="defaultForm-email"
+                      >Subtitle:</label
                     >
                     <input
                       type="email"
@@ -134,11 +149,12 @@
                       data-error="wrong"
                       data-success="right"
                       for="defaultForm-pass"
-                      >Description:</label
+                      >Information:</label
                     >
                     <textarea
                       id="defaultForm-pass"
                       class="form-control validate"
+                      required
                     /></textarea>
                   </div>
                 </div>
@@ -160,39 +176,25 @@
             <tr>
               <th>S/N</th>
               <th>Title</th>
-              <th>Description</th>
+              <th>Sub-Title</th>
+              <th>Information</th>
               <th> Action </th>
             </tr>
-            <tr>
-              <td>1</td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
-              <td>
-                <i class="fa-solid fa-eye"></i>
-                <i class="fa-solid fa-pen"></i>
-                <i class="fa-solid fa-trash-can"></i>
-              </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Francisco Chang</td>
-              <td>Mexico</td>
-              <td>
-                <i class="fa-solid fa-eye"></i>
-                <i class="fa-solid fa-pen"></i>
-                <i class="fa-solid fa-trash-can"></i>
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Giovanni Rovelli</td>
-              <td>Italy</td>
-              <td>
-                <i class="fa-solid fa-eye"></i>
-                <i class="fa-solid fa-pen"></i>
-                <i class="fa-solid fa-trash-can"></i>
-              </td>
-            </tr>
+         
+            <% notifications.forEach((notification, index) => { %>
+                <tr>
+                  <td> <%- index %> </td>
+                  <td> <%- notification.title %> </td>
+                  <td> <%- notification.subTitle %> </td>
+                  <td> <%- notification.info %> </td>
+                  <td>
+                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-pen"></i>
+                    <i class="fa-solid fa-trash-can"></i>
+                  </td>
+                </tr>
+            <% }) %>
+
           </table>
         </div>
       </div>
@@ -215,5 +217,9 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    
+    <!-- Coustom JS link -->
+    <script src="/js/script.js"></script>
   </body>
 </html>

@@ -5,12 +5,12 @@ const { Notification } = require("../models/notification");
 
 // Get Data
 router.get("/", async (req, res) => {
-  const notification = await Notification.find();
+  const notifications = await Notification.find();
 
-  if (!notification) {
+  if (!notifications) {
     res.status(500).json({ success: false });
   }
-  res.render('notification', { notification })
+  res.render('notification', { notifications })
 
   // res.send(notification);
 });
