@@ -16,17 +16,19 @@ router.get("/", async (req, res) => {
 });
 
 // Post Data
-router.post("/courses", async (req, res) => {
+router.post("/", (req, res) => {
   const course = new Courses({
+    image: req.body.image,
     title: req.body.title,
     description: req.body.description,
-    image: req.body.image,
   });
 
   course
     .save()
-    .then((course) => {
-      res.status(201).json(course);
+    .then(() => {
+      res.status(201);
+
+      res.redirect('/courses');
     })
     .catch((err) => {
       res.status(500).json({
@@ -36,16 +38,15 @@ router.post("/courses", async (req, res) => {
     });
 });
 
-
 // Delete Data
-router.get("/delete/:id", (req, res, next) => {
+router.get("/:id", (req, res, next) => {
   Courses.findByIdAndDelete({ _id: req.params.id }, (err, docs) => {
     if (err) {
       console.log("Something went wrong in deleting data");
       next(err);
     } else {
       console.log("Deleted Successfully");
-      res.redirect("/")
+      res.redirect("/courses");
     }
   });
 });

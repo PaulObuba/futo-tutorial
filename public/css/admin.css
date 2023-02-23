@@ -232,7 +232,7 @@ td:first-child {
 
 th:last-child,
 td:last-child {
-  width: 7rem;
+  min-width: 7rem;
   text-align: center;
   padding: 0;
 }
@@ -246,7 +246,13 @@ tr td img {
   border-radius: 50%;
 }
 
-tr td i {
+tr td .icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+tr td a {
   color: var(--text-black-900);
   border-radius: 5px;
   padding: 0.3rem;
@@ -254,7 +260,8 @@ tr td i {
   cursor: pointer;
 }
 
-tr td i:hover {
+tr td a:hover {
+  color: var(--text-black-900);
   background-color: var(--light-white);
 }
 

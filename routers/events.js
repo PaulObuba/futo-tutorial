@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
   if (!events) {
     res.status(500).json({ success: false });
   }
-  res.render('events', { events })
+  res.render("events", { events });
 
   // res.send(events);
 });
@@ -27,7 +27,8 @@ router.post("/", async (req, res) => {
   events
     .save()
     .then((event) => {
-      res.status(201).json(event);
+      res.status(201);
+      res.redirect("/events");
     })
     .catch((err) => {
       res.status(500).json({
@@ -35,6 +36,18 @@ router.post("/", async (req, res) => {
         success: false,
       });
     });
+});
+
+// Delete Data
+router.get("/:id", (req, res) => {
+  Events.findByIdAndDelete({ _id: req.params.id }, (err) => {
+    if (err) {
+      console.log("Something went wrong in deleting data");
+    } else {
+      console.log("Data Deleted Successfully");
+      res.redirect("/events");
+    }
+  });
 });
 
 module.exports = router;

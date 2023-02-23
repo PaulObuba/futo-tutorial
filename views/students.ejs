@@ -91,31 +91,31 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <form action="">
+              <form action="/students" method="post">
                 <div class="modal-body mx-3">
                   <div class="md-form mb-3">
                     <label data-error="wrong" data-success="right" for="defaultForm-email">Image:</label>
-                    <input type="file" id="defaultForm-file" class="form-control validate" required />
+                    <input type="file" id="defaultForm-file" class="form-control validate" name="image" required />
                   </div>
 
                   <div class="md-form mb-3">
                     <label data-error="wrong" data-success="right" for="defaultForm-email">Title:</label>
-                    <input type="text" id="defaultForm-email" class="form-control validate" required />
+                    <input type="text" id="defaultForm-email" class="form-control validate" name="title" required />
                   </div>
 
                   <div class="md-form mb-3">
                     <label data-error="wrong" data-success="right" for="defaultForm-email">Name:</label>
-                    <input type="text" id="defaultForm-email" class="form-control validate" required />
+                    <input type="text" id="defaultForm-email" class="form-control validate" name="name" required />
                   </div>
 
                   <div class="md-form mb-4">
                     <label data-error="wrong" data-success="right" for="defaultForm-pass">Description:</label>
-                    <input type="text" id="defaultForm-pass" class="form-control validate" required />
+                    <input type="text" id="defaultForm-pass" class="form-control validate" name="description" required />
                   </div>
 
                   <div class="md-form mb-4">
                     <label data-error="wrong" data-success="right" for="defaultForm-pass">Social links:</label>
-                    <input type="text" id="defaultForm-pass" class="form-control validate" />
+                    <input type="text" id="defaultForm-pass" class="form-control validate" name="links" />
                   </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
@@ -151,9 +151,8 @@
                   <td><%- student.description %></td>
                   <td><%- student.links[0] %></td>
                   <td>
-                    <i class="fa-solid fa-eye"></i>
-                    <i class="fa-solid fa-pen"></i>
-                    <i class="fa-solid fa-trash-can"></i>
+                    <a class="fa-solid fa-pen"></a>
+                    <a href="/students/<%- student._id %>" class="fa-solid fa-trash-can"></a>
                   </td>
                 </tr>
                 <% }) %>

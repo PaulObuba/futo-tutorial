@@ -94,21 +94,21 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <form action="/courses">
+              <form method="post" action="/courses">
                 <div class="modal-body mx-3">
                   <div class="md-form mb-3">
                     <label data-error="wrong" data-success="right" for="defaultForm-email">Image:</label>
-                    <input type="file" id="defaultForm-file" class="form-control validate" name="image" required />
+                    <input type="file"  class="form-control validate" name="image" required />
                   </div>
 
                   <div class="md-form mb-3">
                     <label data-error="wrong" data-success="right" for="defaultForm-email">Name:</label>
-                    <input type="text" id="defaultForm-email" class="form-control validate" name="title" required />
+                    <input type="text"  class="form-control validate" name="title" required />
                   </div>
 
                   <div class="md-form mb-4">
                     <label data-error="wrong" data-success="right" for="defaultForm-pass">Description:</label>
-                    <textarea type="password" id="defaultForm-pass" class="form-control validate" name="description"
+                    <textarea type="password" class="form-control validate" name="description"
                       required /></textarea>
                   </div>
                 </div>
@@ -139,10 +139,10 @@
                   <td> <%- course.image %></td>
                   <td> <%- course.title %></td>
                   <td> <%- course.description %></td>
-                  <td>
-                    <a href="#" class="fa-solid fa-eye"></a>
+                  <td class="icons">
+                    <!-- <a href="#" class="fa-solid fa-eye"></a> -->
                     <a href="#" class="fa-solid fa-pen"></a>
-                    <a href="/delete/<%- course._id %>" class="fa-solid fa-trash-can"></a>
+                    <a href="/courses/<%- course._id %>" class="fa-solid fa-trash-can"></a>
                   </td>
                 </tr>
                 <% }) %>

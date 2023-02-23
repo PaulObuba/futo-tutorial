@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
+const bodyParser = require("body-parser");
 
 require("dotenv/config");
 const cors = require("cors");
@@ -12,6 +13,7 @@ app.set("view engine", "ejs");
 app.use(cors());
 app.options("*", cors());
 app.use(express.json());
+app.use(bodyParser.urlencoded());
 app.use(morgan("tiny"));
 app.use(express.static("public"));
 

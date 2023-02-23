@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
   if (!notifications) {
     res.status(500).json({ success: false });
   }
-  res.render('notification', { notifications })
+  res.render("notification", { notifications });
 
   // res.send(notification);
 });
@@ -26,7 +26,8 @@ router.post("/", (req, res) => {
   notification
     .save()
     .then((notification) => {
-      res.status(201).json(notification);
+      res.status(201);
+      res.redirect("/notification");
     })
     .catch((err) => {
       res.status(500).json({
@@ -36,5 +37,20 @@ router.post("/", (req, res) => {
     });
 });
 
+// Delete Data
+router.get("/:id", (req, res) => {
+  const confirmDelete = (event) => {
+    if (event == "yes") {
+      Notification.findByIdAndDelete({ _id: req.params.id }, (err) => {
+        if (err) {
+          console.log("Something went wrong in deleting data");
+        } else {
+          console.log("Data Deleted Successfully");
+          res.redirect("/notification");
+        }
+      });
+    }
+  };
+});
 
 module.exports = router;
