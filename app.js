@@ -25,7 +25,12 @@ const studentRouter = require("./routers/students");
 const teacherRouter = require("./routers/teachers");
 const notificationRouter = require("./routers/notification");
 // Home pages
-const homeRouter = re
+const homeRouter = require("./routers/home");
+const coursesRouter = require("./routers/homeCourses");
+const eventsRouter = require("./routers/homeEvent");
+const studentsRouter = require("./routers/homeStudent");
+const teachersRouter = require("./routers/homeTeacher");
+const notificationsRouter = require("./routers/homeNotification");
 
 const api = process.env.API_URL;
 
@@ -36,6 +41,13 @@ app.use(`${api}/events`, eventRouter);
 app.use(`${api}/students`, studentRouter);
 app.use(`${api}/teachers`, teacherRouter);
 app.use(`${api}/notification`, notificationRouter);
+// Home pages
+app.use("/home", homeRouter);
+app.use("/courses", coursesRouter);
+app.use("/events", eventsRouter);
+app.use("/students", studentsRouter);
+app.use("/teachers", teachersRouter);
+app.use("/notification", notificationsRouter);
 
 // DB Connection
 mongoose
