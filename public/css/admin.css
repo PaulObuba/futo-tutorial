@@ -241,6 +241,11 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+tbody tr .descrip {
+  white-space: wrap;
+  width: 4rem;
+}
+
 tr td img {
   width: 2.5rem;
   border-radius: 50%;

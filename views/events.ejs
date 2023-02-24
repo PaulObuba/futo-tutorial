@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Custom Style Link -->
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
 
   <!-- Courses Style link -->
-  <link rel="stylesheet" href="./css/admin.css" />
+  <link rel="stylesheet" href="/css/admin.css" />
 
   <!-- Font awesome link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
@@ -42,25 +42,25 @@
             </a>
           </li>
           <li>
-            <a href="/courses">
+            <a href="./courses">
               <i class="fa-brands fa-discourse"></i> Courses
             </a>
           </li>
           <li>
-            <a href="/events" class="active"> <i class="fa fa-list" onclick="rightSectionTogglerBtn()"></i> Events </a>
+            <a href="./events" class="active"> <i class="fa fa-list" onclick="rightSectionTogglerBtn()"></i> Events </a>
           </li>
           <li>
-            <a href="/students">
+            <a href="./students">
               <i class="fa-sharp fa-solid fa-street-view"></i> Students
             </a>
           </li>
           <li>
-            <a href="/teachers">
+            <a href="./teachers">
               <i class="fa-solid fa-person-chalkboard"></i> Teachers
             </a>
           </li>
           <li>
-            <a href="/notification">
+            <a href="./notification">
               <i class="fa-solid fa-bell"></i> Notification
             </a>
           </li>
@@ -122,6 +122,29 @@
           </div>
         </div>
         <!-- Add course Popup ends -->
+
+        <!-- Delete Modal confirmation -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title font-weight-bold text-xl" id="exampleModalLabel">Delete Event </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to delete this Event?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="confirmDelete('no')">Cancle</button>
+              <button type="button" class="btn btn-danger"  onclick="confirmDelete('yes')"> Delete </button> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Delete Modal confirmation Ends -->
         
        <div style="overflow-x:auto;">
         <table>
@@ -156,7 +179,7 @@
                </td>
                <td>
                  <a class="fa-solid fa-pen"></a>
-                 <a class="fa-solid fa-trash-can" href="/events/<%- event._id %>"></a>
+                 <a class="fa-solid fa-trash-can" data-toggle="modal" data-target="#deleteModal"></a>
                </td>
              </tr>
              <% }) %>

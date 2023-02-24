@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/login.css" />
+    <!-- Custom Style Link -->
+    <link rel="stylesheet" href="./css/style.css" />
+
     <!-- Font awesome link -->
     <link
       rel="stylesheet"
@@ -20,61 +21,468 @@
 
     <title>FUTO</title>
   </head>
-
   <body>
-    <!-- Login Section -->
-    <!-- <section class="login">
-    <div class="login-logo">
-      <img src="/images/logo.png" alt="login-logo" />
+    <!-- Home Section -->
+    <div class="home-section">
+      <!-- Navigation Section -->
+      <section class="nav-bar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="./images/logo.png " alt="logo" />
+          </a>
+        </div>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+          <ul class="nav-left">
+            <li><a href="#"> Home </a></li>
+            <li><a href="./courses.html"> Courses </a></li>
+            <li><a href="./event.html"> Event </a></li>
+            <li><a href="./students.html"> Students </a></li>
+            <li><a href="./teachers.html"> Teachers </a></li>
+          </ul>
+          <ul class="nav-right">
+            <!-- <li class="notify">
+              <a href="#"> <i class="fa fa-bell red"></i> </a>
+            </li> -->
+            <li>
+              <a href="#">
+                <i class="fa fa-bell"><span class="red"></span></i>
+              </a>
+            </li>
+            <li><a href="./login.html"> LogOut </a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Hero Section -->
+      <section class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div
+              class="hero-section"
+              style="
+                background-image: url('https://xqsuperschool.org/rethinktogether/wp-content/uploads/sites/5/2021/05/pexels-pixabay-267885.jpg');
+              "
+            >
+              <div class="overlay"></div>
+              <div class="hero-content">
+                <p class="hero-text1">Better education for better</p>
+                <h1>Civil Engineers</h1>
+                <p class="hero-text2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Illum, debitis? Recusandae odit facilis autem sint, laboriosam
+                  vero perspiciatis necessitatibus fugiat, sapiente quos
+                  quibusdam iusto, corrupti nihil earum dolor accusamu
+                </p>
+                <div>
+                  <button class="btn">Learn more</button>
+                </div>
+                <div class="card-div">
+                  <div class="card">
+                    <i class="fa fa-graduation-cap"></i>
+                    <div class="card-content">
+                      <p class="number">160+</p>
+                      <p class="text">Courses</p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <i class="fa fa-user"></i>
+                    <div>
+                      <p class="number">160+</p>
+                      <p class="text">Students</p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <i class="fa fa-chalkboard-user"></i>
+                    <div>
+                      <p class="number">160+</p>
+                      <p class="text">Teachers</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="hero-section"
+              style="
+                background-image: url('https://media.istockphoto.com/id/1171063170/photo/young-female-graphic-designer-creating-new-project-sitting-on-floor.jpg?s=612x612&w=0&k=20&c=57avR6pKcQx_o-f0PdTV_DVoRMx7eqCaFb6zTelNqI4=');
+              "
+            >
+              <div class="overlay"></div>
+              <div class="hero-content">
+                <h1>Federal University <br />of Technology Owerri</h1>
+                <p class="hero-text2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Illum, debitis? Recusandae odit facilis autem sint, laboriosam
+                  vero perspiciatis necessitatibus fugiat, sapiente quos
+                  quibusdam iusto, corrupti nihil earum dolor accusamu
+                </p>
+                <div>
+                  <button class="btn">Learn more</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="hero-section"
+              style="
+                background-image: url('https://admissions.usf.edu/hs-fs/hubfs/adm-blog-spring-reading-list-college-students-inline.jpg?width=740&name=adm-blog-spring-reading-list-college-students-inline.jpg');
+              "
+            >
+              <div class="overlay"></div>
+              <div class="hero-content">
+                <h1>
+                  WHAT STARTS HERE <br />
+                  CHANGES THE WORLD
+                </h1>
+                <p class="hero-text2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Illum, debitis? Recusandae odit facilis autem sint, laboriosam
+                  vero perspiciatis necessitatibus fugiat, sapiente quos
+                  quibusdam iusto, corrupti nihil earum dolor accusamu
+                </p>
+                <div>
+                  <button class="btn">Learn more</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="hero-section"
+              style="
+                background-image: url('https://media.istockphoto.com/id/1248521713/photo/exhausted-and-tired-black-girl-uses-laptop-writes-essay-study-for-class-assignment-students.jpg?s=612x612&w=0&k=20&c=TQE-zu4P3KOEOX0303hB1Px760rhOBoOMcUPPkQVzas=');
+              "
+            >
+              <div class="overlay"></div>
+              <div class="hero-content">
+                <h1>Federal University <br />of Technology Owerri</h1>
+                <p class="hero-text2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Illum, debitis? Recusandae odit facilis autem sint, laboriosam
+                  vero perspiciatis necessitatibus fugiat, sapiente quos
+                  quibusdam iusto, corrupti nihil earum dolor accusamu
+                </p>
+                <div>
+                  <button class="btn">Learn more</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about-section sec-2">
+        <h2 class="sec-h2">About Us</h2>
+        <p class="text">
+          We are a public school intrested in any student exploring the field of
+          sicence, technology, engineering and math.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi vel a
+          corrupti temporibus repellendus facere fugiat? Totam consequuntur
+          rerum necessitatibus, eos pariatur corporis voluptates, saepe aliquam
+          maxime accusamus nam voluptatum! Nam provident cupiditate rerum
+          nihil..
+        </p>
+      </section>
+
+      <!-- MISSION SECTION  -->
+      <section class="mission-section">
+        <div class="overlay"></div>
+        <h2>Mission</h2>
+        <p class="text">
+          Accelerating our progress as international Civil Engineering leader to
+          fulfill our academic and professional passions.
+        </p>
+      </section>
+
+      <!-- Courses Section -->
+      <section class="courses-section">
+        <h2 class="sec-h2">Popular courses</h2>
+        <div class="swiper courseSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide course">
+              <img
+                src="https://s40424.pcdn.co/in/wp-content/uploads/2022/07/digital-marketing-courses.jpg"
+              />
+              <h3>Engineering</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit. Earum accusamus
+                molestiae sequi?
+              </p>
+            </div>
+            <div class="swiper-slide course">
+              <img
+                src="https://s40424.pcdn.co/in/wp-content/uploads/2022/02/ISB-ITPM-650x314.jpg"
+              />
+              <h3>Engineering</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit. Earum accusamus
+                molestiae sequi?
+              </p>
+            </div>
+            <div class="swiper-slide course">
+              <img
+                src="https://www.nist.gov/sites/default/files/images/2019/09/25/tech_transfer.jpg"
+              />
+              <h3>Engineering</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit. Earum accusamus
+                molestiae sequi?
+              </p>
+            </div>
+            <div class="swiper-slide course">
+              <img
+                src="https://elearningindustry.com/wp-content/uploads/2015/10/learning-technologies-fundamentals-part-1.jpg"
+              />
+              <h3>Engineering</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit. Earum accusamus
+                molestiae sequi?
+              </p>
+            </div>
+            <div class="swiper-slide course">
+              <img
+                src="https://www.ed2go.com/common/images/1/16255/teacher-websites-t/jpg.jpg"
+              />
+              <h3>Engineering</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit. Earum accusamus
+                molestiae sequi?
+              </p>
+            </div>
+            <div class="swiper-slide course">
+              <img
+                src="https://img.freepik.com/premium-photo/using-online-connect-technology-business-education-communication_1421-3950.jpg"
+              />
+              <h3>Engineering</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit. Earum accusamus
+                molestiae sequi?
+              </p>
+            </div>
+            <div class="swiper-slide course">
+              <img
+                src="https://bioprocessintl.com/wp-content/uploads/2015/03/13-3-Dennett-Photo1.jpg"
+              />
+              <h3>Engineering</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit. Earum accusamus
+                molestiae sequi?
+              </p>
+            </div>
+            <div class="swiper-slide course">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdo9vEE0xHhIlMbMwsw-k3SXhwUnf4id23RA&usqp=CAU"
+              />
+              <h3>Engineering</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit. Earum accusamus
+                molestiae sequi?
+              </p>
+            </div>
+          </div>
+          <button class="btn"><a href="./courses.html"> View more </a></button>
+        </div>
+      </section>
+
+      <!-- VISION SECTION -->
+      <section class="vision-section">
+        <div class="overlay"></div>
+        <h2>Vision</h2>
+        <p class="text">
+          Accelerating our progress as international Civil Engineering leader to
+          fulfill our academic and professional passions.
+        </p>
+      </section>
+
+      <!-- Course Mate Section -->
+      <section class="course-mate-section">
+        <h2 class="sec-h2">Departmental Course mates</h2>
+        <div class="swiper courseMateSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide course">
+              <img
+                src="https://media.istockphoto.com/id/1351445530/photo/african-student-sitting-in-classroom.jpg?s=612x612&w=0&k=20&c=1ICaZ03iFLzDmxfBkfDkmBGSgj1SDEpsM3eSDgB1KBk="
+              />
+              <h3>Name/ nick name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit.
+              </p>
+            </div>
+            <div class="swiper-slide course">
+              <img
+                src="https://media.istockphoto.com/id/883657418/photo/cant-wait-to-get-the-semester-started.jpg?b=1&s=170667a&w=0&k=20&c=eGTBavaKBpo4JYp3pQi1YoMM7sKlR_LxysWf9QtIEKY="
+              />
+              <h3>Name/ nick name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit.
+              </p>
+            </div>
+            <div class="swiper-slide course">
+              <img
+                src="https://media.istockphoto.com/id/1006213126/photo/beautiful-young-woman-with-books-and-digital-tablet-standing-at-window-in-campus.jpg?s=612x612&w=0&k=20&c=KIUPV1SrnQDVxq19Li7-6b7ncSpdm9iPq4aNKjIzqcA="
+              />
+              <h3>Name/ nick name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit.
+              </p>
+            </div>
+            <div class="swiper-slide course">
+              <img
+                src="https://www.smu.edu/-/media/Images/News/2020/Winter/iStock-509916803.jpg?h=666&iar=0&w=1000&hash=611FF3A2A6A50CE710DE06568D8B68AA"
+              />
+              <h3>Name/ nick name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit.
+              </p>
+            </div>
+            <div class="swiper-slide course">
+              <img
+                src="https://t4.ftcdn.net/jpg/03/43/56/01/360_F_343560107_3hbbBIEppQmOkr14pUwk2EbIEYDT7lV0.jpg"
+              />
+              <h3>Name/ nick name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit.
+              </p>
+            </div>
+            <div class="swiper-slide course">
+              <img
+                src="https://nationalcenter.org/project21/wp-content/uploads/sites/4/2018/06/black-college-student.jpg"
+              />
+              <h3>Name/ nick name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit.
+              </p>
+            </div>
+            <div class="swiper-slide course">
+              <img
+                src="https://www.blackhistorymonth.org.uk/wp-content/uploads/2021/01/shutterstock_763464100-623x438.jpg"
+              />
+              <h3>Name/ nick name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit.
+              </p>
+            </div>
+            <div class="swiper-slide course">
+              <img
+                src="https://thumbs.dreamstime.com/b/african-american-college-student-29039693.jpg"
+              />
+              <h3>Name/ nick name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit.
+              </p>
+            </div>
+            <div class="swiper-slide course">
+              <img
+                src="https://cdn.24.co.za/files/Cms/General/d/8655/878c8fbc58e14536b2c8dc73b25ef88c.jpg"
+              />
+              <h3>Name/ nick name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, labore. Itaque, modi suscipit.
+              </p>
+            </div>
+          </div>
+          <button class="btn"><a href="./students.html"> View more </a></button>
+        </div>
+      </section>
+
+      <section class="picture-section"></section>
+
+      <footer>
+        <div class="footer-sec1">
+          <p>
+            Our School is ranked "B" <br />
+            by the Federal Department of Education.
+          </p>
+          <button>More Info</button>
+        </div>
+        <div class="footer-sec2">
+          <div class="footer-logo">
+            <a href="#">
+              <img src="./images/logo.png" alt="logo" />
+            </a>
+          </div>
+          <div class="foot-links">
+            <h3 class="foot-title">Contact Us</h3>
+            <p class="foot-text">
+              2011 Bienville Street <br />
+              New Orleans, LA 70112
+            </p>
+            <p class="foot-text">
+              Phone: (504) 324-7061 <br />
+              Fax: (504) 459-2602
+            </p>
+          </div>
+          <div>
+            <h3 class="foot-title">Quick Links</h3>
+            <a href="#"> Home </a>
+            <a href="#"> Courses </a>
+            <a href="#"> Events </a>
+            <a href="#"> Students </a>
+            <a href="#"> Teachers </a>
+          </div>
+          <div>
+            <h3 class="foot-title">Social Links</h3>
+            <a href="#"> Facebook </a>
+            <a href="#"> LinkedIn </a>
+            <a href="#"> Instagram </a>
+            <a href="#"> Twitter </a>
+            <a href="#"> WhatsApp </a>
+          </div>
+        </div>
+        <div class="footer-sec3">
+          <div class="social-links">
+            <h4>Social Links :</h4>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <p>
+            Federal University of Technology Owerri | Copyright
+            2023
+          </p>
+        </div>
+        <div class="footer-sec4">
+          <div class="overlay"></div>
+          <h3>Belong to the best Department</h3>
+          <p>
+            Federal University of Technology Owerri interested in exploring
+            the fields of science, technology, engineering, and math.
+          </p>
+        </div>
+      </footer>
     </div>
 
-    <form>
-      <div class="input">
-        <input type="text" id="user" placeholder="User" />
-        <i class="fa fa-user"></i>
-      </div>
-      <div class="input">
-        <input type="password" id="password" placeholder="Password" />
-        <i class="fa fa-eye-slash"></i>
-      </div>
-      <p>Forgot Password ?</p>
-      <input type="button" value="Login" class="login-btn" />
-    </form>
-  </section> -->
+    <!-- Initialize Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-    <table style="width: 100%; text-align: center">
-      <tr style="padding: 2rem">
-        <th>Head</th>
-        <th>Head</th>
-        <th>Head</th>
-        <th>Head</th>
-      </tr>
-
-        <% users.forEach(function(user){ %>
-          <tr>
-          <td><%- user.name %></td>
-        </tr>
-        <% }); %>
- 
-
-
-    </table>
-
-    <script>
-      // Password Toggler
-      let eye = document.querySelector(".fa-eye-slash");
-      let password = document.getElementById("password");
-
-      eye.onclick = () => {
-        eye.classList.toggle("fa-eye");
-        if (eye.classList.contains("fa-eye")) {
-          password.type = "text";
-        } else {
-          password.type = "password";
-        }
-      };
-
-      console.log(users);
-    </script>
+    <!-- Custom JS link -->
+    <script src="./js/app.js"></script>
   </body>
 </html>

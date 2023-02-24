@@ -10,28 +10,21 @@ router.get("/", async (req, res) => {
     res.status(500).json({ success: false });
   }
 
-  res.render("home", { users });
+  res.render("login", { users });
   // res.send(users)
 });
 
-router.post("/", (req, res) => {
-  const user = new Login({
-    name: req.body.name,
-    image: req.body.image,
-    church: req.body.church,
-  });
+router.post('/', async (req, res) => {
+  // check if the user exists
+  const user = await Login.findOne({ username: req.body.username, password: req.body.password })
 
-  user
-    .save()
-    .then((loginUser) => {
-      res.status(201).json(loginUser);
-    })
-    .catch((err) => {
-      res.status(500).json({
-        error: err,
-        success: false,
-      });
-    });
-});
+  if (user) {
+    res.status(201)
+    res.redirect('home')
+  } else {
+    res.status(500).json({ err: "Invalid Username Or Password" });
+    res.redirect('/')
+  }
+})
 
 module.exports = router;

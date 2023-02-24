@@ -4,7 +4,7 @@ const router = express.Router();
 const { Notification } = require("../models/notification");
 
 // Get Data
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   const notifications = await Notification.find();
 
   if (!notifications) {
@@ -39,18 +39,15 @@ router.post("/", (req, res) => {
 
 // Delete Data
 router.get("/:id", (req, res) => {
-  const confirmDelete = (event) => {
-    if (event == "yes") {
-      Notification.findByIdAndDelete({ _id: req.params.id }, (err) => {
-        if (err) {
-          console.log("Something went wrong in deleting data");
-        } else {
-          console.log("Data Deleted Successfully");
-          res.redirect("/notification");
-        }
-      });
+  Notification.findByIdAndDelete({ _id: req.params.id }, (err) => {
+    
+    if (err) {
+      console.log("Something went wrong in deleting data");
+    } else {
+      console.log("Data Deleted Successfully");
+      res.redirect("/notification");
     }
-  };
+  });
 });
 
 module.exports = router;
