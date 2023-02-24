@@ -115,7 +115,8 @@
   margin-bottom: 20px;
 }
 
-.left-section .nav li a {
+.left-section .nav li a,
+.left-section .nav li button {
   display: block;
   font-size: 16px;
   font-weight: 600;
@@ -130,6 +131,27 @@
 
 .left-section .nav li a i {
   margin-right: 15px;
+}
+
+.left-section .nav li button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.left-section .nav li button i {
+  margin-right: 12px;
+  transition: all 0.25s ease;
+}
+
+.left-section .nav li div {
+  border: none;
+  background-color: transparent;
+}
+
+.left-section .nav li div a {
+  background-color: transparent;
 }
 
 .left-section .nav-toggler {
@@ -296,6 +318,5 @@ tr td a:hover {
 
   .table-container {
     left: 0;
-    font-size: 80%;
   }
 }

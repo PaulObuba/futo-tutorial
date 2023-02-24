@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
+const api = process.env.API_URL;
+
 const { Login } = require("../models/login");
 
 router.get("/", async (req, res) => {
@@ -16,17 +18,16 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   // check if the user exists
-  const user = await Login.findOne({
-    username: req.body.username,
-    password: req.body.password,
-  });
+  const user = await Login.findOne();
 
-  if (user.username === req.body.username) {
-    res.status(201);
+  if (req.body.username === 'User') {
     res.redirect("home");
-  } else {
-    res.status(500).json({ err: "Invalid Username Or Password" });
-    res.redirect("/");
+  } else if (req.body.username === 'Admin') {
+    res.redirect(`${api}/courses`)
+  } 
+  else {
+    res.status(500).json({ err: "Invalid Username or Password" });
+    
   }
 });
 

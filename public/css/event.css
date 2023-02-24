@@ -1,0 +1,140 @@
+.hero-section {
+  height: 80vh;
+  padding-top: 5rem;
+}
+
+.hero-content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+}
+
+.course {
+  position: relative;
+}
+
+.course .time {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5rem;
+  background-color: var(--prim-color);
+  border-bottom-left-radius: 5px;
+  padding: 0.5rem;
+}
+
+.course .time .date {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.course .time .date-string {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1300px) {
+
+  .hero-content {
+    padding: 4rem 2rem 0 3rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3.4rem;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 850px) {
+  
+  .hero-content {
+    padding-top: 10rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 0;
+  }
+  .hero-content {
+    padding: 8rem 2rem 0 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    line-height: 40px;
+  }
+
+  .hero-content .hero-text2 {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .counter-section .card-div {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-section {
+    padding: 0;
+  }
+
+  .hero-content {
+    padding: 0 2rem;
+    padding-top: 8rem;
+  }
+
+  .hero-content .hero-text1 {
+    font-size: 0.7rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+    line-height: 40px;
+  }
+
+  .hero-content .hero-text2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  /* COUNTER SECTION */
+
+  .counter-section .card-div {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .counter-section .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-right: none;
+    border-bottom: 1px solid var(--light-white);
+    padding: 1rem;
+    padding-bottom: 3rem;
+  }
+}

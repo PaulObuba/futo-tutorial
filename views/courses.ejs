@@ -37,7 +37,7 @@
       <div class="nav">
         <ul>
           <li>
-            <a href="./admin">
+            <a href="/home">
               <i class="fa fa-home"></i> Home
             </a>
           </li>
@@ -63,6 +63,16 @@
             <a href="./notification">
               <i class="fa-solid fa-bell"></i> Notification
             </a>
+          </li>
+          <li class="dropdown">
+            <button id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa-sharp fa-solid fa-caret-down"></i>
+              Logout
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdown">
+              <a class="dropdown-item" href="/home">Login as user</a>
+              <a class="dropdown-item" href="/">Logout</a>
+            </div>
           </li>
         </ul>
       </div>
@@ -94,22 +104,21 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <form method="post" action="/courses">
+              <form method="post" action="./courses">
                 <div class="modal-body mx-3">
                   <div class="md-form mb-3">
                     <label data-error="wrong" data-success="right" for="defaultForm-email">Image:</label>
-                    <input type="file"  class="form-control validate" name="image" required />
+                    <input type="file" class="form-control validate" name="image" required />
                   </div>
 
                   <div class="md-form mb-3">
                     <label data-error="wrong" data-success="right" for="defaultForm-email">Name:</label>
-                    <input type="text"  class="form-control validate" name="title" required />
+                    <input type="text" class="form-control validate" name="title" required />
                   </div>
 
                   <div class="md-form mb-4">
                     <label data-error="wrong" data-success="right" for="defaultForm-pass">Description:</label>
-                    <textarea type="password" class="form-control validate" name="description"
-                      required /></textarea>
+                    <textarea type="password" class="form-control validate" name="description" required /></textarea>
                   </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
@@ -142,7 +151,7 @@
                   <td class="icons">
                     <!-- <a href="#" class="fa-solid fa-eye"></a> -->
                     <a href="#" class="fa-solid fa-pen"></a>
-                    <a href="/courses/<%- course._id %>" class="fa-solid fa-trash-can"></a>
+                    <a href="./courses/<%- course._id %>" class="fa-solid fa-trash-can"></a>
                   </td>
                 </tr>
                 <% }) %>
@@ -168,7 +177,7 @@
 
 
   <!-- Coustom JS link -->
-  <script src="/js/script.js"></script>
+  <script src="/js/server.js"></script>
 </body>
 
 </html>

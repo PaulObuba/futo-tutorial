@@ -28,7 +28,7 @@ router.post("/", (req, res) => {
     .then(() => {
       res.status(201);
 
-      res.redirect('/courses');
+      res.redirect('./courses');
     })
     .catch((err) => {
       res.status(500).json({
@@ -39,14 +39,14 @@ router.post("/", (req, res) => {
 });
 
 // Delete Data
-router.get("/:id", (req, res, next) => {
+router.get("./:id", (req, res, next) => {
   Courses.findByIdAndDelete({ _id: req.params.id }, (err, docs) => {
     if (err) {
       console.log("Something went wrong in deleting data");
       next(err);
     } else {
       console.log("Deleted Successfully");
-      res.redirect("/courses");
+      res.redirect("./courses");
     }
   });
 });
