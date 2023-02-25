@@ -27,7 +27,7 @@ router.post("/", (req, res) => {
     .save()
     .then((notification) => {
       res.status(201);
-      res.redirect("/notification");
+      res.redirect("./notification");
     })
     .catch((err) => {
       res.status(500).json({

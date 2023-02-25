@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Custom Style Link -->
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <!-- Courses Style link -->
+  <link rel="stylesheet" href="/css/admin.css" />
+
+  <!-- Font awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+  <!-- Bootstrap PopUp link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <title>Admin</title>
+</head>
+
+<body>
+  <div class="main-container">
+
+    <!-- LEFT SECTION STARTS -->
+    <div class="left-section">
+
+      <div class="nav-toggler">
+        <span></span>
+      </div>
+
+      <div class="title">
+        <a><span>A</span>dmin</a>
+      </div>
+
+      <div class="nav">
+        <ul>
+          <li>
+            <a href="./admin" class="active"> <i class="fa fa-home"></i> Home </a>
+          </li>
+          <li>
+            <a href="./courses">
+              <i class="fa-brands fa-discourse"></i> Courses
+            </a>
+          </li>
+          <li>
+            <a href="./events">
+              <i class="fa fa-list"></i> Events
+            </a>
+          </li>
+          <li>
+            <a href="./students">
+              <i class="fa-sharp fa-solid fa-street-view"></i> Students
+            </a>
+          </li>
+          <li>
+            <a href="./teachers">
+              <i class="fa-solid fa-person-chalkboard"></i> Teachers
+            </a>
+          </li>
+          <li>
+            <a href="./notification">
+              <i class="fa-solid fa-bell"></i> Notification
+            </a>
+          </li>
+          <li>
+            <button class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Logout
+            </button>
+            <div class="dropdown-menu links" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/home">Login as user</a>
+              <a class="dropdown-item" href="/">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RIGHT SECTION STARTS -->
+  
+      <div class="table-container">
+        <div class="admin-head">
+          14 may 20215
+          <a href="/" class="btn"> Logout </a>
+        </div>
+
+        <div class="admin-content">
+          <div class="header">
+            <h2> Admin Dashboard </h2>
+            <p> Welcome to the admin Dashboard, love to see you back again</p>
+          </div>
+
+          <div class="cards">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-brands fa-discourse color1"></i>
+                <div>
+                  <p class="num">120</p>
+                  <p class="txt">Reg</p>
+                </div>
+              </div>
+              <p class="text"> Courses </p>
+            </div>
+            <div class="card">
+              <div class="icon">
+                <i class="fa fa-list color2"></i>
+                <div>
+                  <p class="num">120</p>
+                  <p class="txt">Reg</p>
+                </div>
+              </div>
+              <p class="text"> Events </p>
+            </div>
+            <div class="card">
+              <div class="icon">
+                <i class="fa-sharp fa-solid fa-street-view color3"></i>
+                <div>
+                  <p class="num">120</p>
+                  <p class="txt">Reg</p>
+                </div>
+              </div>
+              <p class="text"> Students </p>
+            </div>
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-person-chalkboard color4"></i>
+                <div>
+                  <p class="num">120</p>
+                  <p class="txt">Reg</p>
+                </div>
+              </div>
+              <p class="text"> Teachers </p>
+            </div>
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-bell color5"></i>
+                <div>
+                  <p class="num">120</p>
+                  <p class="txt">Reg</p>
+                </div>
+              </div>
+              <p class="text"> Notification</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+  <!-- Coustom JS link -->
+  <script src="/js/script.js"></script>
+</body>
+
+</html>

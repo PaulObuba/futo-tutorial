@@ -28,7 +28,7 @@ router.post("/", (req, res) => {
     .then(() => {
       res.status(201);
 
-      res.redirect('/courses');
+      res.redirect('./courses');
     })
     .catch((err) => {
       res.status(500).json({

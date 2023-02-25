@@ -19,6 +19,7 @@ app.use(express.static("public"));
 
 // Import Routers
 const loginRouter = require("./routers/login");
+const adminRouter = require('./routers/admin')
 const courseRouter = require("./routers/courses");
 const eventRouter = require("./routers/events");
 const studentRouter = require("./routers/students");
@@ -36,6 +37,7 @@ const api = process.env.API_URL;
 
 // Routes
 app.use("/", loginRouter);
+app.use(`${api}/admin`, adminRouter)
 app.use(`${api}/courses`, courseRouter);
 app.use(`${api}/events`, eventRouter);
 app.use(`${api}/students`, studentRouter);
