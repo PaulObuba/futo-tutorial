@@ -16,18 +16,16 @@ router.get("/", async (req, res) => {
   // res.send(users)
 });
 
-router.post("/", async (req, res) => {
+router.post("/", (req, res) => {
   // check if the user exists
-  const user = await Login.findOne();
+  // const user = await Login.findOne();
 
-  if (req.body.username === 'User') {
+  if (req.body.username === "User") {
     res.redirect("home");
-  } else if (req.body.username === 'Admin') {
-    res.redirect(`${api}/courses`)
-  } 
-  else {
-    res.status(500).json({ err: "Invalid Username or Password" });
-    
+  } else if (req.body.username === "Admin") {
+    res.redirect("api/v1/admin");
+  } else {
+    res.status(500).json({err: 'Invalid Username or Password' })
   }
 });
 

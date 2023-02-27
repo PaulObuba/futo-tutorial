@@ -370,7 +370,7 @@ section {
 /* SECTION 2 */
 
 .sec-2 {
-  padding: 5rem 8rem;
+  padding: 5rem 7rem;
 }
 
 .sec-2 p {
@@ -381,7 +381,7 @@ section {
 /* COURSES SECTION */
 
 .courses-section {
-  padding: 4rem 8rem;
+  padding: 4rem 7rem;
 }
 
 .courses-section .courses {
@@ -457,7 +457,7 @@ section {
 /* COURSES Mate SECTION */
 
 .course-mate-section {
-  padding: 4rem 8rem;
+  padding: 4rem 7rem;
 }
 
 .course-mate-section .course-mate {
@@ -822,7 +822,7 @@ footer .footer-sec4 {
   /* MISSION SECTION */
   .mission-section,
   .vision-section {
-    padding: 5rem 2rem;
+    padding: 4rem 2rem;
   }
 
   /* Course Mate Section */

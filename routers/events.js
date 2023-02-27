@@ -28,7 +28,7 @@ router.post("/", async (req, res) => {
     .save()
     .then((event) => {
       res.status(201);
-      res.redirect("/events");
+      res.redirect("./events");
     })
     .catch((err) => {
       res.status(500).json({

@@ -29,7 +29,7 @@ router.post("/", (req, res) => {
     .save()
     .then((teacher) => {
       res.status(201);
-      res.redirect("/teachers");
+      res.redirect("./teachers");
     })
     .catch((err) => {
       res.status(500).json({

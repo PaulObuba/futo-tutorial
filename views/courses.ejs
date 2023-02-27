@@ -64,12 +64,12 @@
               <i class="fa-solid fa-bell"></i> Notification
             </a>
           </li>
-          <li class="dropdown">
-            <button id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fa-sharp fa-solid fa-caret-down"></i>
+          <li>
+            <button class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
               Logout
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdown">
+            <div class="dropdown-menu links" aria-labelledby="dropdownMenuButton">
               <a class="dropdown-item" href="/home">Login as user</a>
               <a class="dropdown-item" href="/">Logout</a>
             </div>
@@ -81,6 +81,11 @@
     <!-- RIGHT SECTION STARTS -->
     <div class="table-section">
       <div class="table-container">
+        <div class="admin-head">
+          14 may 20215
+          <a href="/" class="btn"> Logout </a>
+        </div>
+        
         <div class="table-header">
           <h2>Courses</h2>
           <button class="btn" data-toggle="modal" data-target="#modalLoginForm">
@@ -131,7 +136,7 @@
         </div>
         <!-- Add course Popup ends -->
 
-        <div style="overflow-x:auto;">
+        <div class='table-div' style="overflow-x:auto;">
           <table>
             <tr>
               <th>S/N</th>
@@ -177,7 +182,7 @@
 
 
   <!-- Coustom JS link -->
-  <script src="/js/server.js"></script>
+  <script src="/js/admin.js"></script>
 </body>
 
 </html>

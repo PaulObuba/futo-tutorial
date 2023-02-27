@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+// Navigation
+
+let menu = document.querySelector("#menu-btn");
+let navbar = document.querySelector(".navbar");
+
+menu.onclick = () => {
+  menu.classList.toggle("fa-times");
+  navbar.classList.toggle("active");
+};
+
+window.addEventListener("scroll", () => {
+  menu.classList.remove("fa-times");
+  navbar.classList.remove("active");
+})
+
+// function courseSection(e) {
+//   e.preventDefault();
+//   window.location = "courses.html";
+//   console.log("y this thing no won work??");
+// }
+
+//  Initialize Swiper
+>>>>>>> 7c19744fc0e65bc68b36ebaade69e585ef2fe04d
 
 //  Hero Swiper
 var swiper = new Swiper(".mySwiper", {

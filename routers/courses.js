@@ -46,7 +46,7 @@ router.get("./:id", (req, res, next) => {
       next(err);
     } else {
       console.log("Deleted Successfully");
-      res.redirect("./courses");
+      res.redirect("/api/v1/courses");
     }
   });
 });

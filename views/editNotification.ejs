@@ -38,7 +38,9 @@
       <div class="nav">
         <ul>
           <li>
-            <a href="./admin" class="active"> <i class="fa fa-home"></i> Home </a>
+            <a href="./admin">
+              <i class="fa fa-home"></i> Home
+            </a>
           </li>
           <li>
             <a href="./courses">
@@ -61,7 +63,7 @@
             </a>
           </li>
           <li>
-            <a href="./notification">
+            <a href="./notification" class="active">
               <i class="fa-solid fa-bell"></i> Notification
             </a>
           </li>
@@ -80,73 +82,65 @@
     </div>
 
     <!-- RIGHT SECTION STARTS -->
-  
+    <div class="table-section">
       <div class="table-container">
         <div class="admin-head">
           14 may 20215
           <a href="/" class="btn"> Logout </a>
         </div>
 
-        <div class="admin-content">
-          <div class="header">
-            <h2> Admin Dashboard </h2>
-            <p> Welcome to the admin Dashboard, love to see you back again</p>
-          </div>
+        <div class="table-header">
+          <h2>Notification</h2>
+          <button class="btn" data-toggle="modal" data-target="#modalLoginForm">
+            Add Info
+          </button>
+        </div>
 
-          <div class="cards">
-            <div class="card">
-              <div class="icon">
-                <i class="fa-brands fa-discourse color1"></i>
-                <div>
-                  <p class="num">120</p>
-                  <p class="txt">Reg</p>
-                </div>
+        <!-- Add course Popup -->
+
+        <!-- Forms Modal -->
+
+        <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+          aria-hidden="true" data-keyboard="false" data-backdrop="static">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-semi-bold">
+                  Add Info
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </div>
-              <p class="text"> Courses </p>
-            </div>
-            <div class="card">
-              <div class="icon">
-                <i class="fa fa-list color2"></i>
-                <div>
-                  <p class="num">120</p>
-                  <p class="txt">Reg</p>
+              <form action="./edit/<%- club._id %>" method="post">
+                <div class="modal-body mx-3">
+
+                  <div class="md-form mb-3">
+                    <label data-error="wrong" data-success="right" for="defaultForm-email">Ttile:</label>
+                    <input type="text" id="defaultForm-email" class="form-control validate" name="title" required value="<%- club.title %>" />
+                  </div>
+
+                  <div class="md-form mb-3">
+                    <label data-error="wrong" data-success="right" for="defaultForm-email">Subtitle:</label>
+                    <input type="text" id="defaultForm-email" class="form-control validate" name="subTitle" value="<%- club.subTitle %>" />
+                  </div>
+
+                  <div class="md-form mb-4">
+                    <label data-error="wrong" data-success="right" for="defaultForm-pass">Information:</label>
+                    <textarea id="defaultForm-pass" class="form-control validate" name="info" required value="<%- club.notification %>" /></textarea>
+                  </div>
                 </div>
-              </div>
-              <p class="text"> Events </p>
-            </div>
-            <div class="card">
-              <div class="icon">
-                <i class="fa-sharp fa-solid fa-street-view color3"></i>
-                <div>
-                  <p class="num">120</p>
-                  <p class="txt">Reg</p>
+                <div class="modal-footer d-flex justify-content-center">
+                  <input class="btn" data-target="#modalLoginForm" type="submit" value="Add" />
                 </div>
-              </div>
-              <p class="text"> Students </p>
-            </div>
-            <div class="card">
-              <div class="icon">
-                <i class="fa-solid fa-person-chalkboard color4"></i>
-                <div>
-                  <p class="num">120</p>
-                  <p class="txt">Reg</p>
-                </div>
-              </div>
-              <p class="text"> Teachers </p>
-            </div>
-            <div class="card">
-              <div class="icon">
-                <i class="fa-solid fa-bell color5"></i>
-                <div>
-                  <p class="num">120</p>
-                  <p class="txt">Reg</p>
-                </div>
-              </div>
-              <p class="text"> Notification</p>
+              </form>
             </div>
           </div>
         </div>
+        <!-- Add course Popup ends -->
+
       </div>
+    </div>
   </div>
 
   <!-- Optional JavaScript -->
@@ -163,7 +157,7 @@
 
 
   <!-- Coustom JS link -->
-  <script src="/js/script.js"></script>
+  <script src="/js/admin.js"></script>
 </body>
 
 </html>

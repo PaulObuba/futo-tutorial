@@ -19,6 +19,7 @@ app.use(express.static("public"));
 
 // Import Routers
 const loginRouter = require("./routers/login");
+const adminRouter = require('./routers/admin')
 const courseRouter = require("./routers/courses");
 const eventRouter = require("./routers/events");
 const studentRouter = require("./routers/students");
@@ -31,16 +32,23 @@ const eventsRouter = require("./routers/homeEvent");
 const studentsRouter = require("./routers/homeStudent");
 const teachersRouter = require("./routers/homeTeacher");
 const notificationsRouter = require("./routers/homeNotification");
+// Import Edit pages
+const editNotificationRouter = require('./routers/editNotification')
 
 const api = process.env.API_URL;
 
 // Routes
 app.use("/", loginRouter);
+app.use(`${api}/admin`, adminRouter)
 app.use(`${api}/courses`, courseRouter);
 app.use(`${api}/events`, eventRouter);
 app.use(`${api}/students`, studentRouter);
 app.use(`${api}/teachers`, teacherRouter);
 app.use(`${api}/notification`, notificationRouter);
+
+// Edit pages
+app.use(`${api}/editNotification`, editNotificationRouter);
+
 // Home pages
 app.use("/home", homeRouter);
 app.use("/courses", coursesRouter);
@@ -69,3 +77,5 @@ const port = process.env.PORT || 9999;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+module.exports = app;
