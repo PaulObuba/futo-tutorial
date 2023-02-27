@@ -23,6 +23,7 @@
 
 <body>
   <div class="main-container">
+
     <!-- LEFT SECTION STARTS -->
     <div class="left-section">
 
@@ -42,12 +43,14 @@
             </a>
           </li>
           <li>
-            <a href="./courses" class="active">
+            <a href="./courses">
               <i class="fa-brands fa-discourse"></i> Courses
             </a>
           </li>
           <li>
-            <a href="./events"> <i class="fa fa-list"></i> Events </a>
+            <a href="./events">
+              <i class="fa fa-list"></i> Events
+            </a>
           </li>
           <li>
             <a href="./students">
@@ -60,7 +63,7 @@
             </a>
           </li>
           <li>
-            <a href="./notification">
+            <a href="./notification" class="active">
               <i class="fa-solid fa-bell"></i> Notification
             </a>
           </li>
@@ -85,17 +88,17 @@
           14 may 20215
           <a href="/" class="btn"> Logout </a>
         </div>
-        
+
         <div class="table-header">
-          <h2>Courses</h2>
+          <h2>Notification</h2>
           <button class="btn" data-toggle="modal" data-target="#modalLoginForm">
-            Add Course
+            Add Info
           </button>
         </div>
 
         <!-- Add course Popup -->
 
-        <!-- Modal -->
+        <!-- Forms Modal -->
 
         <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
           aria-hidden="true" data-keyboard="false" data-backdrop="static">
@@ -103,33 +106,32 @@
             <div class="modal-content">
               <div class="modal-header text-center">
                 <h4 class="modal-title w-100 font-weight-semi-bold">
-                  Add Course
+                  Add Info
                 </h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <form method="post" action="./courses">
+              <form action="./edit/<%- club._id %>" method="post">
                 <div class="modal-body mx-3">
+
                   <div class="md-form mb-3">
-                    <label data-error="wrong" data-success="right" for="defaultForm-email">Image:</label>
-                    <input type="file"  class="form-control validate" name="image" required />
+                    <label data-error="wrong" data-success="right" for="defaultForm-email">Ttile:</label>
+                    <input type="text" id="defaultForm-email" class="form-control validate" name="title" required value="<%- club.title %>" />
                   </div>
 
                   <div class="md-form mb-3">
-                    <label data-error="wrong" data-success="right" for="defaultForm-email">Name:</label>
-                    <input type="text"  class="form-control validate" name="title" required />
+                    <label data-error="wrong" data-success="right" for="defaultForm-email">Subtitle:</label>
+                    <input type="text" id="defaultForm-email" class="form-control validate" name="subTitle" value="<%- club.subTitle %>" />
                   </div>
 
                   <div class="md-form mb-4">
-                    <label data-error="wrong" data-success="right" for="defaultForm-pass">Description:</label>
-                    <textarea type="password" class="form-control validate" name="description"
-                      required /></textarea>
+                    <label data-error="wrong" data-success="right" for="defaultForm-pass">Information:</label>
+                    <textarea id="defaultForm-pass" class="form-control validate" name="info" required value="<%- club.notification %>" /></textarea>
                   </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
-                  <input class="btn" data-target="#modalLoginForm" type="submit" value="Add">
-
+                  <input class="btn" data-target="#modalLoginForm" type="submit" value="Add" />
                 </div>
               </form>
             </div>
@@ -137,34 +139,6 @@
         </div>
         <!-- Add course Popup ends -->
 
-        <div class='table-div' style="overflow-x:auto;">
-          <table>
-            <tr>
-              <th>S/N</th>
-              <th>Image</th>
-              <th>Name</th>
-              <th>Description</th>
-              <th>Action</th>
-            </tr>
-
-            <tbody>
-              <% courses.forEach((course, index)=> { %>
-                <tr>
-                  <td> <%- index %></td>
-                  <td> <%- course.image %></td>
-                  <td> <%- course.title %></td>
-                  <td> <%- course.description %></td>
-                  <td class="icons">
-                    <!-- <a href="#" class="fa-solid fa-eye"></a> -->
-                    <a href="#" class="fa-solid fa-pen"></a>
-                    <a href="./courses/<%- course._id %>" class="fa-solid fa-trash-can"></a>
-                  </td>
-                </tr>
-                <% }) %>
-            </tbody>
-
-          </table>
-        </div>
       </div>
     </div>
   </div>

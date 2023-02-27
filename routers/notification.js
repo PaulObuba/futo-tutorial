@@ -42,10 +42,23 @@ router.get("/:id", (req, res) => {
   Notification.findByIdAndDelete({ _id: req.params.id }, (err) => {
     
     if (err) {
-      console.log("Something went wrong in deleting data");
+      console.log("Something went wrong in deleting data " + err);
     } else {
       console.log("Data Deleted Successfully");
-      res.redirect("/notification");
+      res.redirect("/api/v1/notification");
+    }
+  });
+});
+
+// Update Data
+router.get("/edit/:id", (req, res) => {
+  Notification.findByIdAndUpdate({ _id: req.params.id }, req.body, { new:true }, (err, docs) => {
+    
+    if (err) {
+      console.log("Something went wrong in updating data " + err);
+    } else {
+      console.log("Data Updated Successfully");
+      res.redirect("/api/v1/editNotification");
     }
   });
 });
