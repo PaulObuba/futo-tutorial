@@ -151,10 +151,12 @@
   background-color: transparent;
   border: none;
   outline: none;
+  padding-top: 0;
 }
 
 .left-section .nav li .links a {
   padding-left: 0.3rem;
+  margin-left: 0.9rem;
 }
 
 .left-section .nav li .links a:hover {
@@ -221,7 +223,7 @@
   bottom: 0;
   right: 0;
   height: 100%;
-  background-color:  #eff0f1;
+  background-color: #eff0f1;
   font-family: "Nunito", sans-serif;
 }
 
@@ -490,4 +492,25 @@ tr td a:hover {
   .hero-section {
     padding: 0;
   }
+}
+
+.popup,
+.openn {
+  position: fixed;
+  top: -10rem;
+  left: 40%;
+
+  background-color: bisque;
+  border-radius: 8px;
+  width: 30rem;
+  padding: 1rem;
+
+  transition: all 0.25s ease-in-out;
+  opacity: 0;
+}
+
+.openn {
+  top: 5rem;
+  opacity: 1;
+  z-index: 100;
 }

@@ -76,13 +76,14 @@
     </div>
 
     <!-- RIGHT SECTION STARTS -->
+
     <div class="table-section">
       <div class="table-container">
         <div class="admin-head">
           14 may 20215
-          <a href="/" class="btn"> Logout </a>
+          <a class="btn" data-toggle="modal" data-target="#logoutModal"> Logout </a>
         </div>
-       
+
         <div class="table-header">
           <h2>Students</h2>
           <button class="btn" data-toggle="modal" data-target="#modalLoginForm">
@@ -90,115 +91,182 @@
           </button>
         </div>
 
-        <!-- Add course Popup -->
-
-        <!-- Modal -->
-
-        <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-          aria-hidden="true" data-keyboard="false" data-backdrop="static">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-semi-bold">
-                  Add Student
-                </h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <form action="./students" method="post">
-                <div class="modal-body mx-3">
-                  <div class="md-form mb-3">
-                    <label data-error="wrong" data-success="right" for="defaultForm-email">Image:</label>
-                    <input type="file" id="defaultForm-file" class="form-control validate" name="image" required />
-                  </div>
-
-                  <div class="md-form mb-3">
-                    <label data-error="wrong" data-success="right" for="defaultForm-email">Title:</label>
-                    <input type="text" id="defaultForm-email" class="form-control validate" name="title" required />
-                  </div>
-
-                  <div class="md-form mb-3">
-                    <label data-error="wrong" data-success="right" for="defaultForm-email">Name:</label>
-                    <input type="text" id="defaultForm-email" class="form-control validate" name="name" required />
-                  </div>
-
-                  <div class="md-form mb-4">
-                    <label data-error="wrong" data-success="right" for="defaultForm-pass">Description:</label>
-                    <input type="text" id="defaultForm-pass" class="form-control validate" name="description" required />
-                  </div>
-
-                  <div class="md-form mb-4">
-                    <label data-error="wrong" data-success="right" for="defaultForm-pass">Social links:</label>
-                    <input type="text" id="defaultForm-pass" class="form-control validate" name="links" />
-                  </div>
-                </div>
-                <div class="modal-footer d-flex justify-content-center">
-                  <input class="btn" data-target="#modalLoginForm" value="Add" type="submit" />
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <!-- Add course Popup ends -->
-
-        <!-- Delete Modal confirmation -->
-        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true" data-keyboard="false" data-backdrop="static">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title font-weight-bold text-xl" id="exampleModalLabel">Delete Student </h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              Are you sure you want to delete this Student?
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="confirmDelete('no')">Cancle</button>
-              <button type="button" class="btn btn-danger"  onclick="confirmDelete('yes')"> Delete </button> 
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Delete Modal confirmation Ends -->
-
         <div class='table-div' style="overflow-x: auto">
           <table>
-           <thdad>
-             <tr>
-              <th>S/N</th>
-              <th>Image</th>
-              <th>Title</th>
-              <th>Name</th>
-              <th>Description</th>
-              <th>Scocila links</th>
-              <th>Action</th>
-            </tr>
-           </thead>
+            <thdad>
+              <tr>
+                <th>S/N</th>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Scocila links</th>
+                <th>Action</th>
+              </tr>
+              </thead>
 
-            <tbody>
-              <% students.forEach((student, index)=> { %>
-                <tr>
-                  <td><%- index %></td>
-                  <td><%- student.image %></td>
-                  <td><%- student.title %></td>
-                  <td><%- student.name %></td>
-                  <td><%- student.description %></td>
-                  <td><%- student.links[0] %></td>
-                  <td>
-                    <a class="fa-solid fa-pen"></a>
-                    <a class="fa-solid fa-trash-can"data-toggle="modal" data-target="#deleteModal"></a>
-                  </td>
-                </tr>
-                <% }) %>
-            </tbody>
+              <tbody>
+                <% students.forEach((student, index)=> { %>
+                  <tr>
+                    <td><%- index %></td>
+                    <td><%- student.image %></td>
+                    <td><%- student.title %></td>
+                    <td><%- student.name %></td>
+                    <td><%- student.description %></td>
+                    <td><%- student.links[0] %></td>
+                    <td>
+                      <a class="fa-solid fa-pen" data-toggle="modal" data-target="#updateForm"></a>
+                      <a class="fa-solid fa-trash-can" data-toggle="modal" data-target="#deleteModal"></a>
+                    </td>
+                  </tr>
+                  <% }) %>
+              </tbody>
           </table>
         </div>
       </div>
     </div>
+
+    <!-- Confirm Logout Section Starts -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title font-weight-bold text-xl" id="exampleModalLabel"> LOGOUT </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Are you sure you want to Logout?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal"
+              onclick="confirmDelete('no')">Cancel</button>
+            <button type="button" class="btn btn-danger" onclick="confirmDelete('yes')"> <a href="/"
+                style="color: white;"> Logout </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Confirm Logout Section Ends -->
+
+    <!-- Forms Modal Starts -->
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-semi-bold">
+              Add Student
+            </h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form action="./students" method="post">
+            <div class="modal-body mx-3">
+              <div class="md-form mb-3">
+                <label data-error="wrong" data-success="right" for="defaultForm-email">Image:</label>
+                <input type="file" id="defaultForm-file" class="form-control validate" name="image" required />
+              </div>
+
+              <div class="md-form mb-3">
+                <label data-error="wrong" data-success="right" for="defaultForm-email">Title:</label>
+                <input type="text" id="defaultForm-email" class="form-control validate" name="title" required />
+              </div>
+
+              <div class="md-form mb-3">
+                <label data-error="wrong" data-success="right" for="defaultForm-email">Name:</label>
+                <input type="text" id="defaultForm-email" class="form-control validate" name="name" required />
+              </div>
+
+              <div class="md-form mb-4">
+                <label data-error="wrong" data-success="right" for="defaultForm-pass">Description:</label>
+                <input type="text" id="defaultForm-pass" class="form-control validate" name="description" required />
+              </div>
+
+              <div class="md-form mb-4">
+                <label data-error="wrong" data-success="right" for="defaultForm-pass">Social links:</label>
+                <input type="text" id="defaultForm-pass" class="form-control validate" name="links" />
+              </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <input class="btn" data-target="#modalLoginForm" value="Add" type="submit" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Forms Moudle ends -->
+
+    <!-- Edit form Modal popup starts -->
+    <div class="modal fade" id="updateForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-semi-bold">
+              Update Info
+            </h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form action="./edit" method="post">
+            <div class="modal-body mx-3">
+
+              <div class="md-form mb-3">
+                <label data-error="wrong" data-success="right" for="defaultForm-email">Ttile:</label>
+                <input type="text" id="defaultForm-email" class="form-control validate" name="title" required
+                  value="" />
+              </div>
+
+              <div class="md-form mb-3">
+                <label data-error="wrong" data-success="right" for="defaultForm-email">Subtitle:</label>
+                <input type="text" id="defaultForm-email" class="form-control validate" name="subTitle" value="" />
+              </div>
+
+              <div class="md-form mb-4">
+                <label data-error="wrong" data-success="right" for="defaultForm-pass">Information:</label>
+                <textarea id="defaultForm-pass" class="form-control validate" name="info" required
+                  value="" /></textarea>
+              </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <input class="btn" data-target="#updateForm" type="submit" value="Add" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Edit form Modal popup ends -->
+
+    <!-- Delete Modal confirmation -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title font-weight-bold text-xl" id="exampleModalLabel">Delete Student </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Are you sure you want to delete this Student?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal"
+              onclick="confirmDelete('no')">Cancle</button>
+            <button type="button" class="btn btn-danger" onclick="confirmDelete('yes')"> Delete </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Delete Modal confirmation Ends -->
+
   </div>
 
   <!-- Optional JavaScript -->

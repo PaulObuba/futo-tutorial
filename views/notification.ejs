@@ -82,11 +82,12 @@
     </div>
 
     <!-- RIGHT SECTION STARTS -->
+
     <div class="table-section">
       <div class="table-container">
         <div class="admin-head">
           14 may 20215
-          <a href="/" class="btn"> Logout </a>
+          <a class="btn" data-toggle="modal" data-target="#logoutModal"> Logout </a>
         </div>
 
         <div class="table-header">
@@ -95,90 +96,6 @@
             Add Info
           </button>
         </div>
-
-        <!-- Add course Popup -->
-
-        <!-- Forms Modal -->
-
-        <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-          aria-hidden="true" data-keyboard="false" data-backdrop="static">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-semi-bold">
-                  Add Info
-                </h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <form action="./notification" method="post">
-                <div class="modal-body mx-3">
-
-                  <div class="md-form mb-3">
-                    <label data-error="wrong" data-success="right" for="defaultForm-email">Ttile:</label>
-                    <input type="text" id="defaultForm-email" class="form-control validate" name="title" required />
-                  </div>
-
-                  <div class="md-form mb-3">
-                    <label data-error="wrong" data-success="right" for="defaultForm-email">Subtitle:</label>
-                    <input type="text" id="defaultForm-email" class="form-control validate" name="subTitle" />
-                  </div>
-
-                  <div class="md-form mb-4">
-                    <label data-error="wrong" data-success="right" for="defaultForm-pass">Information:</label>
-                    <textarea id="defaultForm-pass" class="form-control validate" name="info" required /></textarea>
-                  </div>
-                </div>
-                <div class="modal-footer d-flex justify-content-center">
-                  <input class="btn" data-target="#modalLoginForm" type="submit" value="Add" />
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <!-- Add course Popup ends -->
-
-        <!-- Edit form Modal popup starts -->
-        <div class="modal fade" id="updateForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-        aria-hidden="true" data-keyboard="false" data-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header text-center">
-              <h4 class="modal-title w-100 font-weight-semi-bold">
-                Update Info
-              </h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <form action="./edit" method="post">
-              <div class="modal-body mx-3">
-
-                <div class="md-form mb-3">
-                  <label data-error="wrong" data-success="right" for="defaultForm-email">Ttile:</label>
-                  <input type="text" id="defaultForm-email" class="form-control validate" name="title" required value="" />
-                </div>
-
-                <div class="md-form mb-3">
-                  <label data-error="wrong" data-success="right" for="defaultForm-email">Subtitle:</label>
-                  <input type="text" id="defaultForm-email" class="form-control validate" name="subTitle" value="" />
-                </div>
-
-                <div class="md-form mb-4">
-                  <label data-error="wrong" data-success="right" for="defaultForm-pass">Information:</label>
-                  <textarea id="defaultForm-pass" class="form-control validate" name="info" required value="" /></textarea>
-                </div>
-              </div>
-              <div class="modal-footer d-flex justify-content-center">
-                <input class="btn" data-target="#updateForm" type="submit" value="Add" />
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-        <!-- Edit form Modal popup ends -->
-    
 
         <div class='table-div' style="overflow-x:auto;">
           <table>
@@ -208,8 +125,9 @@
                     <%- notification.info %>
                   </td>
                   <td>
-                    <a class="fa-solid fa-pen" data-toggle="modal" data-target="#updateForm"></a>
-                    <a href="./notification/<%- notification._id %>" class="fa-solid fa-trash-can" data-toggle="modal" data-target="#deleteModal"></a>
+                    <a class="fa-solid fa-pen" data-toggle="modal" data-target="#updateForm"
+                      onclick="editFunction('<%- notification._id %>')"></a>
+                    <a class="fa-solid fa-trash-can" onclick="openPopup('<%- notification._id %>')"></a>
                   </td>
                 </tr>
 
@@ -229,20 +147,138 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                        >Cancle</button>
-                        <button type="button" class="btn btn-danger" > Delete </button>
+                          onclick="confirmDelete('no')">Cancle</button>
+                        <!-- <button type="button" class="btn btn-danger"> <a href="" class="sure"> Delete </a> </button> -->
                       </div>
                     </div>
                   </div>
                 </div>
-                    <!-- Delete Modal confirmation Ends -->
+                <!-- Delete Modal confirmation Ends -->
                 <% }) %>
             </tbody>
 
           </table>
+
+
+          <div class="popup">
+            <h4>Confirm Delete</h4>
+            <p> are you sure you want to delete the notification</p>
+            <button class="btn" onclick="openPopup()"> Cancel </button>
+            <button class="btn"> <a href="" class="sure"> Delete </a> </button>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- Confirm Logout Section Starts -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title font-weight-bold text-xl" id="exampleModalLabel"> LOGOUT </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Are you sure you want to Logout?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal"
+              onclick="confirmDelete('no')">Cancel</button>
+            <button type="button" class="btn btn-danger"> <a href="/" style="color: white;"> Logout </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Confirm Logout Section Ends -->
+
+    <!-- Forms Modal Secton Starts -->
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-semi-bold">
+              Add Info
+            </h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form method="post" action="./notification">
+            <div class="modal-body mx-3">
+
+              <div class="md-form mb-3">
+                <label data-error="wrong" data-success="right" for="defaultForm-email">Ttile:</label>
+                <input type="text" id="defaultForm-email" class="form-control validate" name="title" required />
+              </div>
+
+              <div class="md-form mb-3">
+                <label data-error="wrong" data-success="right" for="defaultForm-email">Subtitle:</label>
+                <input type="text" id="defaultForm-email" class="form-control validate" name="subTitle" />
+              </div>
+
+              <div class="md-form mb-4">
+                <label data-error="wrong" data-success="right" for="defaultForm-pass">Information:</label>
+                <textarea id="defaultForm-pass" class="form-control validate" name="info" required /></textarea>
+              </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <input class="btn" data-target="#modalLoginForm" type="submit" value="Add" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Forms Module Section ends -->
+
+    <!-- Edit form Modal popup starts -->
+    <div class="modal fade" id="updateForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-semi-bold">
+              Update Info
+            </h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <form action='' method="post" class="editt">
+            <div class="modal-body mx-3">
+
+              <div class="md-form mb-3">
+                <label data-error="wrong" data-success="right" for="defaultForm-email">Ttile:</label>
+                <input type="text" id="defaultForm-email" class="form-control validate" name="title" required
+                  value="<%- notifications.title %>" />
+              </div>
+
+              <div class="md-form mb-3">
+                <label data-error="wrong" data-success="right" for="defaultForm-email">Subtitle:</label>
+                <input type="text" id="defaultForm-email" class="form-control validate" name="subTitle" value="" <%-
+                  notifications.subTitle %>" />
+              </div>
+
+              <div class="md-form mb-4">
+                <label data-error="wrong" data-success="right" for="defaultForm-pass">Information:</label>
+                <textarea id="defaultForm-pass" class="form-control validate" name="info" required value="" <%-
+                  notifications.info %>" /></textarea>
+              </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <input class="btn" data-target="#updateForm" type="submit" value="Add" />
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+    <!-- Edit form Modal popup ends -->
   </div>
 
   <!-- Optional JavaScript -->

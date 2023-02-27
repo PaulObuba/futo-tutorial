@@ -39,7 +39,7 @@ router.post("/", (req, res) => {
 });
 
 // Delete Data
-router.get("./:id", (req, res, next) => {
+router.get("/:id", (req, res, next) => {
   Courses.findByIdAndDelete({ _id: req.params.id }, (err, docs) => {
     if (err) {
       console.log("Something went wrong in deleting data");

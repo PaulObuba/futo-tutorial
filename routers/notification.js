@@ -4,7 +4,7 @@ const router = express.Router();
 const { Notification } = require("../models/notification");
 
 // Get Data
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   const notifications = await Notification.find();
 
   if (!notifications) {
@@ -39,8 +39,9 @@ router.post("/", (req, res) => {
 
 // Delete Data
 router.get("/:id", (req, res) => {
+  console.log("notification", req.params.id);
+
   Notification.findByIdAndDelete({ _id: req.params.id }, (err) => {
-    
     if (err) {
       console.log("Something went wrong in deleting data " + err);
     } else {
@@ -51,16 +52,21 @@ router.get("/:id", (req, res) => {
 });
 
 // Update Data
-router.get("/edit/:id", (req, res) => {
-  Notification.findByIdAndUpdate({ _id: req.params.id }, req.body, { new:true }, (err, docs) => {
-    
-    if (err) {
-      console.log("Something went wrong in updating data " + err);
-    } else {
-      console.log("Data Updated Successfully");
-      res.redirect("/api/v1/editNotification");
+router.post("/edit/:id", (req, res) => {
+  Notification.findByIdAndUpdate(
+    { _id: req.params.id },
+    req.body,
+    { new: true },
+    (err, docs) => {
+      if (err) {
+        console.log("Something went wrong in updating data " + err);
+      } else {
+        console.log("Data Updated Successfully");
+
+        res.redirect("/api/v1/notification");
+      }
     }
-  });
+  );
 });
 
 module.exports = router;
