@@ -32,8 +32,6 @@ const eventsRouter = require("./routers/homeEvent");
 const studentsRouter = require("./routers/homeStudent");
 const teachersRouter = require("./routers/homeTeacher");
 const notificationsRouter = require("./routers/homeNotification");
-// Import Edit pages
-const editNotificationRouter = require('./routers/editNotification')
 
 const api = process.env.API_URL;
 
@@ -45,9 +43,6 @@ app.use(`${api}/events`, eventRouter);
 app.use(`${api}/students`, studentRouter);
 app.use(`${api}/teachers`, teacherRouter);
 app.use(`${api}/notification`, notificationRouter);
-
-// Edit pages
-app.use(`${api}/editNotification`, editNotificationRouter);
 
 // Home pages
 app.use("/home", homeRouter);

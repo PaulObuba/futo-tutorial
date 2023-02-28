@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Navigation
 
 let menu = document.querySelector("#menu-btn");
@@ -15,14 +13,6 @@ window.addEventListener("scroll", () => {
   navbar.classList.remove("active");
 })
 
-// function courseSection(e) {
-//   e.preventDefault();
-//   window.location = "courses.html";
-//   console.log("y this thing no won work??");
-// }
-
-//  Initialize Swiper
->>>>>>> 7c19744fc0e65bc68b36ebaade69e585ef2fe04d
 
 //  Hero Swiper
 var swiper = new Swiper(".mySwiper", {

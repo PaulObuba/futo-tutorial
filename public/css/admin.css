@@ -3,6 +3,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
 
   display: flex;
   justify-content: center;
@@ -11,7 +12,7 @@
   height: 100%;
   background-color: #222222;
   border-right: 1px solid #393939;
-  padding: 30px;
+  padding: 30px 30px 0px;
   z-index: 10;
   transition: all 0.5s ease-in-out;
 }
@@ -159,9 +160,22 @@
   margin-left: 0.9rem;
 }
 
-.left-section .nav li .links a:hover {
-  background-color: none;
+/* Admin home Setting css */
+.left-section .nav .reset, .opensetting {
+  position: fixed;
+  z-index: 100;
+  
+  background-color: #222222;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: all 0.30s ease-in-out;
 }
+
+.left-section .nav .opensetting {
+  display: block;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Admin home setting css */
 
 .left-section .nav-toggler {
   position: fixed;
@@ -492,25 +506,4 @@ tr td a:hover {
   .hero-section {
     padding: 0;
   }
-}
-
-.popup,
-.openn {
-  position: fixed;
-  top: -10rem;
-  left: 40%;
-
-  background-color: bisque;
-  border-radius: 8px;
-  width: 30rem;
-  padding: 1rem;
-
-  transition: all 0.25s ease-in-out;
-  opacity: 0;
-}
-
-.openn {
-  top: 5rem;
-  opacity: 1;
-  z-index: 100;
 }

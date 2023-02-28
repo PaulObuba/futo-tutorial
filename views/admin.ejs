@@ -66,6 +66,21 @@
             </a>
           </li>
           <li>
+            <a href="" class="nav-setting">
+              <i class="fa-solid fa-gear"></i> Setting
+            </a>
+          </li>
+          <li class="reset">
+            <ul>
+              <a href="" data-toggle="modal" data-target="#userPassword">
+                <li>Reset User password </li>
+              </a>
+              <a href="" data-toggle="modal" data-target="#adminPassword">
+                <li>Rest Admin password </li>
+              </a>
+            </ul>
+          </li>
+          <li>
             <button class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               Logout
@@ -163,16 +178,89 @@
             Are you sure you want to Logout?
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal"
-              onclick="confirmDelete('no')">Cancel</button>
-            <button type="button" class="btn btn-danger" onclick="confirmDelete('yes')"> <a href="/"
-                style="color: white;"> Logout </a>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-danger"> <a href="/" style="color: white;"> Logout </a>
             </button>
           </div>
         </div>
       </div>
     </div>
     <!-- Confirm Logout Section Ends -->
+
+    <!-- Edit User Password form Modal popup starts -->
+    <div class="modal fade" id="userPassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h5 class="modal-title w-100 font-weight-semi-bold">
+              RESET USER LOGIN
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form action='' method="post" class="editDB">
+            <div class="modal-body mx-3">
+
+              <div class="md-form mb-4">
+                <label data-error="wrong" data-success="right" for="defaultForm-pass">Login User:</label>
+                <input type="text" id="defaultForm-pass" placeholder="User" class="form-control validate" name="date"
+                  required />
+              </div>
+
+              <div class="md-form mb-4">
+                <label data-error="wrong" data-success="right" for="defaultForm-pass">Login Password:</label>
+                <input type="password" id="defaultForm-pass" placeholder="Reset Password" class="form-control validate"
+                  name="description" required />
+              </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <input class="btn" data-target="#modalLoginForm" type="submit" value="Reset" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Edit form Modal popup ends -->
+
+    <!-- Edit Admin Password form Modal popup starts -->
+    <div class="modal fade" id="adminPassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h5 class="modal-title w-100 font-weight-semi-bold">
+              RESET ADMIN LOGIN
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form action='' method="post" class="editDB">
+            <div class="modal-body mx-3">
+
+              <div class="md-form mb-4">
+                <label data-error="wrong" data-success="right" for="defaultForm-pass">Login Admin:</label>
+                <input type="text" id="defaultForm-pass" placeholder="User" class="form-control validate" name="date"
+                  required />
+              </div>
+
+              <div class="md-form mb-4">
+                <label data-error="wrong" data-success="right" for="defaultForm-pass">Login Password:</label>
+                <input type="password" id="defaultForm-pass" placeholder="Reset Password" class="form-control validate"
+                  name="description" required />
+              </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <input class="btn" data-target="#modalLoginForm" type="submit" value="Reset" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Edit form Modal popup ends -->
+
 
   </div>
 
@@ -188,9 +276,22 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
+  <!-- Setting -->
+  <script>
+    const setting = document.querySelector('.nav-setting');
+    const reset = document.querySelector('.reset');
+
+
+    setting.addEventListener('click', (e) => {
+      e.preventDefault()
+
+      reset.classList.toggle('opensetting');
+    })
+
+  </script>
 
   <!-- Coustom JS link -->
-  <script src="/js/script.js"></script>
+  <script src="/js/admin.js"></script>
 </body>
 
 </html>
