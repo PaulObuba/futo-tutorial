@@ -12,35 +12,109 @@ function rightSectionTogglerBtn() {
   navTogglerBtn.classList.toggle("open");
 }
 
-const confirmDelete = (e) => {
-  let url = "http://localhost:9999/api/v1/notification/:id";
+// ================================ COURSES DELETE AND UPDATE STARS ==================================>
 
-  let response = fetch(url);
-  console.log(response);
+// ConfirmDelete from Mongodb
+const coursesConfirmDelete = (e) => {
+  let id = e;
 
-  if (e === "yes") {
-    console.log("The delete button was clicked");
-  } else {
-    console.log("The cancel button was clicked");
-  }
+  document
+    .querySelector(".deleteFromDB")
+    .setAttribute("href", `/api/v1/courses/${id}`);
 };
 
-// popup
-const popup = document.querySelector(".popup");
-
-const openPopup = (e) => {
-  popup.classList.toggle("openn");
-
+// Edit and Update Data from Mongodb
+const coursesEditFunction = (e) => {
   let id = e;
-  let url = `http://localhost:9999/api/v1/notification/${id}`;
-  console.log(url, `/notification/${id}`, document.querySelector(".sure"));
+
   document
-    .querySelector(".sure")
+    .querySelector(".editDB")
+    .setAttribute("action", `/api/v1/courses/edit/${id}`);
+};
+// ================================ COURSES DELETE AND UPDATE ENDS ==================================>
+
+// ================================ EVENTS DELETE AND UPDATE STARS ==================================>
+
+// ConfirmDelete from Mongodb
+const eventsConfirmDelete = (e) => {
+  let id = e;
+
+  document
+    .querySelector(".deleteFromDB")
+    .setAttribute("href", `/api/v1/events/${id}`);
+};
+
+// Edit and Update Data from Mongodb
+const eventsEditFunction = (e) => {
+  let id = e;
+
+  document
+    .querySelector(".editDB")
+    .setAttribute("action", `/api/v1/events/edit/${id}`);
+};
+// ================================ EVENTS DELETE AND UPDATE ENDS ==================================>
+
+// ================================ STUDENS DELETE AND UPDATE STARS ==================================>
+
+// ConfirmDelete from Mongodb
+const studentsConfirmDelete = (e) => {
+  let id = e;
+
+  document
+    .querySelector(".deleteFromDB")
+    .setAttribute("href", `/api/v1/students/${id}`);
+};
+
+// Edit and Update Data from Mongodb
+const studentsEditFunction = (e) => {
+  let id = e;
+
+  document
+    .querySelector(".editDB")
+    .setAttribute("action", `/api/v1/students/edit/${id}`);
+};
+// ================================ STUDENS DELETE AND UPDATE ENDS ==================================>
+
+// ================================ TEACHERS DELETE AND UPDATE STARS ==================================>
+// ConfirmDelete from Mongodb
+const teachersConfirmDelete = (e) => {
+  let id = e;
+
+  document
+    .querySelector(".deleteFromDB")
+    .setAttribute("href", `/api/v1/teachers/${id}`);
+};
+
+// Edit and Update Data from Mongodb
+const teachersEditFunction = (e) => {
+  let id = e;
+
+  document
+    .querySelector(".editDB")
+    .setAttribute("action", `/api/v1/teachers/edit/${id}`);
+};
+// ================================ TEACHERS DELETE AND UPDATE ENDS ==================================>
+
+// ================================ NOTIFICATION DELETE AND UPDATE STARS ==================================>
+
+// ConfirmDelete from Mongodb
+const notificationConfirmDelete = (e) => {
+  let id = e;
+
+  document
+    .querySelector(".deleteFromDB")
     .setAttribute("href", `/api/v1/notification/${id}`);
 };
 
-const editFunction = (e) => {
+// Edit and Update Data from Mongodb
+const notificationEditFunction = (e) => {
   let id = e;
 
-  document.querySelector(".editt").setAttribute("action", `/api/v1/notification/edit/${id}`);
+  document
+    .querySelector(".editDB")
+    .setAttribute("action", `/api/v1/notification/edit/${id}`);
 };
+// ================================ NOTIFICATION DELETE AND UPDATE ENDS ==================================>
+
+// ================================ NOTIFICATION DELETE AND UPDATE STARS ==================================>
+// ================================ NOTIFICATION DELETE AND UPDATE ENDS ==================================>

@@ -51,4 +51,23 @@ router.get("/:id", (req, res, next) => {
   });
 });
 
+// Update Data
+router.post("/edit/:id", (req, res) => {
+  Courses.findByIdAndUpdate(
+    { _id: req.params.id },
+    req.body,
+    { new: true },
+    (err, docs) => {
+      if (err) {
+        console.log("Something went wrong in updating data " + err);
+      } else {
+        console.log("Data Updated Successfully");
+
+        res.redirect("/api/v1/courses");
+      }
+    }
+  );
+});
+
+
 module.exports = router;

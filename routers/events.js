@@ -45,9 +45,28 @@ router.get("/:id", (req, res) => {
       console.log("Something went wrong in deleting data");
     } else {
       console.log("Data Deleted Successfully");
-      res.redirect("/events");
+      res.redirect("/api/v1/events");
     }
   });
 });
+
+// Update Data
+router.post("/edit/:id", (req, res) => {
+  Events.findByIdAndUpdate(
+    { _id: req.params.id },
+    req.body,
+    { new: true },
+    (err, docs) => {
+      if (err) {
+        console.log("Something went wrong in updating data " + err);
+      } else {
+        console.log("Data Updated Successfully");
+
+        res.redirect("/api/v1/events");
+      }
+    }
+  );
+});
+
 
 module.exports = router;
