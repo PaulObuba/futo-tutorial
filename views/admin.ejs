@@ -72,12 +72,18 @@
           </li>
           <li class="reset">
             <ul>
-              <a href="" data-toggle="modal" data-target="#userPassword">
-                <li>Reset User password </li>
-              </a>
-              <a href="" data-toggle="modal" data-target="#adminPassword">
-                <li>Rest Admin password </li>
-              </a>
+              <li>
+                <a href="" data-toggle="modal" data-target="#userPassword"
+                  onclick="userResetPasswordFunction('<%- user[0]._id %>')">
+                  Reset User password
+                </a>
+              </li>
+              <li>
+                <a href="" data-toggle="modal" data-target="#adminPassword"
+                  onclick="adminResetPasswordFunction('<%- admin[0]._id %>')">
+                  Rest Admin password
+                </a>
+              </li>
             </ul>
           </li>
           <li>
@@ -200,19 +206,22 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form action='' method="post" class="editDB">
+          <form action='' method="post" class="resetUser">
             <div class="modal-body mx-3">
 
               <div class="md-form mb-4">
                 <label data-error="wrong" data-success="right" for="defaultForm-pass">Login User:</label>
-                <input type="text" id="defaultForm-pass" placeholder="User" class="form-control validate" name="date"
-                  required />
+                <input type="text" id="defaultForm-pass" placeholder="User" class="form-control validate"
+                  name="username" required />
               </div>
 
               <div class="md-form mb-4">
-                <label data-error="wrong" data-success="right" for="defaultForm-pass">Login Password:</label>
-                <input type="password" id="defaultForm-pass" placeholder="Reset Password" class="form-control validate"
-                  name="description" required />
+                <label data-error="wrong" data-success="right" for="password">Login Password:</label>
+                <div id="input-div">
+                  <input type="password" id="password" placeholder="Reset Password" class="form-control validate"
+                    name="password" required />
+                  <i class="fa fa-eye-slash" onclick="userEyeToggler()"></i>
+                </div>
               </div>
             </div>
             <div class="modal-footer d-flex justify-content-center">
@@ -237,19 +246,22 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form action='' method="post" class="editDB">
+          <form action='' method="post" class="resetAdmin">
             <div class="modal-body mx-3">
 
               <div class="md-form mb-4">
                 <label data-error="wrong" data-success="right" for="defaultForm-pass">Login Admin:</label>
-                <input type="text" id="defaultForm-pass" placeholder="User" class="form-control validate" name="date"
-                  required />
+                <input type="text" id="defaultForm-pass" placeholder="User" class="form-control validate"
+                  name="username" required />
               </div>
 
               <div class="md-form mb-4">
-                <label data-error="wrong" data-success="right" for="defaultForm-pass">Login Password:</label>
-                <input type="password" id="defaultForm-pass" placeholder="Reset Password" class="form-control validate"
-                  name="description" required />
+                <label data-error="wrong" data-success="right" for="password">Login Password:</label>
+                <div id="input-div">
+                  <input type="password" id="password" placeholder="Reset Password" class="password2 form-control validate"
+                    name="password" required />
+                  <i class="fa fa-eye-slash eye2" onclick="adminEyeToggler()"></i>
+                </div>
               </div>
             </div>
             <div class="modal-footer d-flex justify-content-center">
@@ -278,8 +290,34 @@
 
   <!-- Setting -->
   <script>
+    let eye = document.querySelector(".fa-eye-slash");
+    let password = document.querySelector("#password");
+    let eye2 = document.querySelector(".eye2");
+    let password2 = document.querySelector(".password2");
     const setting = document.querySelector('.nav-setting');
     const reset = document.querySelector('.reset');
+
+    // User Password Eye Toggler
+     const userEyeToggler = () => {
+      eye.classList.toggle("fa-eye");
+
+      if (eye.classList.contains("fa-eye")) {
+        password.type = "text";
+      } else {
+        password.type = "password";
+      }
+    };
+
+    // Admin Password Eye Toggler
+     const adminEyeToggler = () => {
+      eye2.classList.toggle("fa-eye");
+
+      if (eye2.classList.contains("fa-eye")) {
+        password2.type = "text";
+      } else {
+        password2.type = "password";
+      }
+    };
 
 
     setting.addEventListener('click', (e) => {
@@ -295,3 +333,8 @@
 </body>
 
 </html>
+<script>
+
+
+
+</script>

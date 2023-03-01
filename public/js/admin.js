@@ -108,13 +108,33 @@ const notificationConfirmDelete = (e) => {
 
 // Edit and Update Data from Mongodb
 const notificationEditFunction = (e) => {
-  let id = e;
 
+console.log(id)
   document
     .querySelector(".editDB")
     .setAttribute("action", `/api/v1/notification/edit/${id}`);
 };
 // ================================ NOTIFICATION DELETE AND UPDATE ENDS ==================================>
 
-// ================================ NOTIFICATION DELETE AND UPDATE STARS ==================================>
-// ================================ NOTIFICATION DELETE AND UPDATE ENDS ==================================>
+// ================================ USER RESET PASSWORD STARS ==================================>
+// Edit and Update Data from Mongodb
+const userResetPasswordFunction = (e) => {
+  let id = e;
+
+  document
+    .querySelector(".resetUser")
+    .setAttribute("action", `/user/edit/${id}`);
+};
+// ================================ USER RESET PASSWORD ENDS ==================================>
+
+// ================================ ADMIN RESET PASSWORD STARS ==================================>
+// Edit and Update Data from Mongodb
+const adminResetPasswordFunction = (e) => {
+  let id = e;
+  console.log(id)
+
+  document
+    .querySelector(".resetAdmin")
+    .setAttribute("action", `/admin/edit/${id}`);
+};
+// ================================ ADMIN RESET PASSWORD ENDS ==================================>

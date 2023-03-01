@@ -395,7 +395,7 @@ section {
   background-color: white;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  min-height: 27rem;
+  min-height: 24rem;
   padding: 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -941,7 +941,7 @@ footer .footer-sec4 {
   }
 
   .hero-content h1 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     line-height: 40px;
   }
 

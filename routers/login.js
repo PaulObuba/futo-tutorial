@@ -49,24 +49,24 @@ router.post("/", async (req, res) => {
 });
 
 // ADD USER
-router.post("/user", (req, res) => {
-  const user = new UserLogin({
-    username: req.body.username,
-    password: req.body.password,
-  });
-  user
-    .save()
-    .then(() => {
-      res.status(201);
-      res.send(user);
-    })
-    .catch((err) => {
-      res.status(500).json({
-        error: err,
-        success: false,
-      });
-    });
-});
+// router.post("/user", (req, res) => {
+//   const user = new UserLogin({
+//     username: req.body.username,
+//     password: req.body.password,
+//   });
+//   user
+//     .save()
+//     .then(() => {
+//       res.status(201);
+//       res.send(user);
+//     })
+//     .catch((err) => {
+//       res.status(500).json({
+//         error: err,
+//         success: false,
+//       });
+//     });
+// });
 
 // UPDATE USER
 router.post("/user/edit/:id", (req, res) => {
@@ -79,30 +79,31 @@ router.post("/user/edit/:id", (req, res) => {
         console.log("Something went wrong in updating User Login " + err);
       } else {
         console.log("User Login Updated Successfully");
+        res.redirect("/api/v1/admin");
       }
     }
   );
 });
 
 // ADD ADMIN
-router.post("/admin", (req, res) => {
-  const admin = new AdminLogin({
-    username: req.body.username,
-    password: req.body.password,
-  });
-  admin
-    .save()
-    .then(() => {
-      res.status(201);
-      res.send(admin);
-    })
-    .catch((err) => {
-      res.status(500).json({
-        error: err,
-        success: false,
-      });
-    });
-});
+// router.post("/admin", (req, res) => {
+//   const admin = new AdminLogin({
+//     username: req.body.username,
+//     password: req.body.password,
+//   });
+//   admin
+//     .save()
+//     .then(() => {
+//       res.status(201);
+//       res.send(admin);
+//     })
+//     .catch((err) => {
+//       res.status(500).json({
+//         error: err,
+//         success: false,
+//       });
+//     });
+// });
 
 // UPDATE Admin
 router.post("/admin/edit/:id", (req, res) => {
@@ -115,6 +116,7 @@ router.post("/admin/edit/:id", (req, res) => {
         console.log("Something went wrong in updating User Login " + err);
       } else {
         console.log("User Login Updated Successfully");
+        res.redirect("/api/v1/admin");
       }
     }
   );

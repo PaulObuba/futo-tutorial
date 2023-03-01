@@ -223,6 +223,17 @@
   background-color: var(--prim-color);
 }
 
+/* Admin setting, RESET LOGIN PASSWORD eye toggle css */
+#input-div {
+  position: relative;
+}
+
+.fa-eye-slash {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+}
+
 /* Table Section */
 
 .table-section {
