@@ -175,7 +175,7 @@
       <div class="swiper-wrapper">
         <% courses.forEach((course, index)=> { %>
           <div class="swiper-slide course">
-            <img src="/images/pic-1.png" />
+            <img src="<%- course.image %>" />
             <h3> <%- course.title %> </h3>
             <p>
               <%- course.description %>

@@ -16,6 +16,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded());
 app.use(morgan("tiny"));
 app.use(express.static("public"));
+app.use('/uploads', express.static('uploads'));
 
 // Import Routers
 const loginRouter = require("./routers/login");

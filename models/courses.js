@@ -9,10 +9,10 @@ const courseSchema = mongoose.Schema({
     type: String,
     require: true,
   },
-  // image: {
-  //   type: String,
-  //   require: true,
-  // },
+  image: {
+    type: String,
+    require: true,
+  },
 });
 
 exports.Courses = mongoose.model('Courses', courseSchema)
