@@ -157,7 +157,7 @@
     </div>
     <!-- Confirm Logout Section Ends -->
 
-    <!-- Forms Modal Starts -->
+    <!--  Add Forms Modal Starts -->
     <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
       aria-hidden="true" data-keyboard="false" data-backdrop="static">
       <div class="modal-dialog modal-dialog-centered" role="document">
@@ -170,11 +170,11 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form method="post" action="./courses">
+          <form method="post" action="./courses" enctype="multipart/form-data">
             <div class="modal-body mx-3">
               <div class="md-form mb-3">
                 <label data-error="wrong" data-success="right" for="defaultForm-email">Image:</label>
-                <input type="file" class="form-control validate" name="image" required />
+                <input type="file" class="form-control validate" name="courseImage" required />
               </div>
 
               <div class="md-form mb-3">
@@ -194,7 +194,7 @@
         </div>
       </div>
     </div>
-    <!-- Forms module ends -->
+    <!-- Add Forms module ends -->
 
     <!-- Edit form Modal popup starts -->
     <div class="modal fade" id="updateForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
