@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
+const { Events } = require('../models/events');
 
-router.get('/', (req, res) => {
-   res.render('homeEvent')
+router.get('/', async (req, res) => {
+   const events = await Events.find();
+
+   res.render('homeEvent', { events })
 });
 
 

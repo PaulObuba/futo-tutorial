@@ -99,7 +99,6 @@
                 <th>Image</th>
                 <th>Title</th>
                 <th>Name</th>
-                <th>Description</th>
                 <th>Scocila links</th>
                 <th>Action</th>
               </tr>
@@ -119,9 +118,6 @@
                     </td>
                     <td>
                       <%- student.name %>
-                    </td>
-                    <td>
-                      <%- student.description %>
                     </td>
                     <td>
                       <%- student.links[0] %>
@@ -156,7 +152,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-danger" > <a href="/" style="color: white;"> Logout </a>
+            <button type="button" class="btn btn-danger"> <a href="/" style="color: white;"> Logout </a>
             </button>
           </div>
         </div>
@@ -177,26 +173,21 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form action="./students" method="post">
+          <form action="./students" method="post" enctype="multipart/form-data">
             <div class="modal-body mx-3">
               <div class="md-form mb-3">
                 <label data-error="wrong" data-success="right" for="defaultForm-email">Image:</label>
-                <input type="file" id="defaultForm-file" class="form-control validate" name="image" required />
+                <input type="file" id="defaultForm-file" class="form-control validate" name="studentImage" required />
               </div>
 
               <div class="md-form mb-3">
                 <label data-error="wrong" data-success="right" for="defaultForm-email">Title:</label>
-                <input type="text" id="defaultForm-email" class="form-control validate" name="title" required />
+                <input type="text" id="defaultForm-email" class="form-control validate" name="title"  />
               </div>
 
               <div class="md-form mb-3">
                 <label data-error="wrong" data-success="right" for="defaultForm-email">Name:</label>
                 <input type="text" id="defaultForm-email" class="form-control validate" name="name" required />
-              </div>
-
-              <div class="md-form mb-4">
-                <label data-error="wrong" data-success="right" for="defaultForm-pass">Description:</label>
-                <input type="text" id="defaultForm-pass" class="form-control validate" name="description" required />
               </div>
 
               <div class="md-form mb-4">
@@ -278,7 +269,8 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-danger"> <a href="" class="deleteFromDB" style="color: white;"> Delete </a> </button>
+            <button type="button" class="btn btn-danger"> <a href="" class="deleteFromDB" style="color: white;"> Delete
+              </a> </button>
           </div>
         </div>
       </div>

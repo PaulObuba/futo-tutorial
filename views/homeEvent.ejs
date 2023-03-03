@@ -270,113 +270,24 @@
 
   <!-- Upcoming Events -->
   <section class="course-mate-section">
-    <h2 class="sec-h2">Upcoming Departmental Evnets</h2>
+    <h2 class="sec-h2">Upcoming Evnets</h2>
     <div class="swiper courseMateSwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide course">
-          <div class="time">
-            <p class="date">14</p>
-            <p class="date-string"><span>FEB</span> 23</p>
+
+        <% events.forEach(event => { %>
+          <div class="swiper-slide course">
+            <div class="time">
+              <p class="date">14</p>
+              <p class="date-string"><span>FEB</span> 23</p>
+            </div>
+            <img src="<%- event.image %>" />
+            <h3><%- event.title %></h3>
+            <p>
+             <%- event.description %>
+            </p>
           </div>
-          <img src="/images/pic-2.png" />
-          <h3>Engineering</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptate, labore. Itaque, modi suscipit. Earum accusamus
-            molestiae sequi?
-          </p>
-        </div>
-        <div class="swiper-slide course">
-          <div class="time">
-            <p class="date">14</p>
-            <p class="date-string"><span>FEB</span> 23</p>
-          </div>
-          <img src="/images/pic-2.png" />
-          <h3>Engineering</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptate, labore. Itaque, modi suscipit. Earum accusamus
-            molestiae sequi?
-          </p>
-        </div>
-        <div class="swiper-slide course">
-          <div class="time">
-            <p class="date">14</p>
-            <p class="date-string"><span>FEB</span> 23</p>
-          </div>
-          <img src="/images/pic-2.png" />
-          <h3>Engineering</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptate, labore. Itaque, modi suscipit. Earum accusamus
-            molestiae sequi?
-          </p>
-        </div>
-        <div class="swiper-slide course">
-          <div class="time">
-            <p class="date">14</p>
-            <p class="date-string"><span>FEB</span> 23</p>
-          </div>
-          <img src="/images/pic-2.png" />
-          <h3>Engineering</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptate, labore. Itaque, modi suscipit. Earum accusamus
-            molestiae sequi?
-          </p>
-        </div>
-        <div class="swiper-slide course">
-          <div class="time">
-            <p class="date">14</p>
-            <p class="date-string"><span>FEB</span> 23</p>
-          </div>
-          <img src="/images/pic-2.png" />
-          <h3>Engineering</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptate, labore. Itaque, modi suscipit. Earum accusamus
-            molestiae sequi?
-          </p>
-        </div>
-        <div class="swiper-slide course">
-          <div class="time">
-            <p class="date">14</p>
-            <p class="date-string"><span>FEB</span> 23</p>
-          </div>
-          <img src="/images/pic-2.png" />
-          <h3>Engineering</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptate, labore. Itaque, modi suscipit. Earum accusamus
-            molestiae sequi?
-          </p>
-        </div>
-        <div class="swiper-slide course">
-          <div class="time">
-            <p class="date">14</p>
-            <p class="date-string"><span>FEB</span> 23</p>
-          </div>
-          <img src="/images/pic-2.png" />
-          <h3>Engineering</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptate, labore. Itaque, modi suscipit. Earum accusamus
-            molestiae sequi?
-          </p>
-        </div>
-        <div class="swiper-slide course">
-          <div class="time">
-            <p class="date">14</p>
-            <p class="date-string"><span>FEB</span> 23</p>
-          </div>
-          <img src="/images/pic-2.png" />
-          <h3>Engineering</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptate, labore. Itaque, modi suscipit. Earum accusamus
-            molestiae sequi?
-          </p>
-        </div>
+        <% }) %>
+
       </div>
     </div>
   </section>

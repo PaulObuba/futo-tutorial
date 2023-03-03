@@ -98,7 +98,6 @@
               <th>Image</th>
               <th>Title</th>
               <th>Name</th>
-              <th>Description</th>
               <th>Social links</th>
               <th>Action</th>
             </tr>
@@ -117,9 +116,6 @@
                   </td>
                   <td>
                     <%- teacher.name %>
-                  </td>
-                  <td>
-                    <%- teacher.description %>
                   </td>
                   <td>
                     <%- teacher.links[0] %>
@@ -176,11 +172,11 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form action="./teachers" method="post">
+          <form action="./teachers" method="post" enctype="multipart/form-data">
             <div class="modal-body mx-3">
               <div class="md-form mb-3">
                 <label data-error="wrong" data-success="right" for="defaultForm-email">Image:</label>
-                <input type="file" id="defaultForm-file" class="form-control validate" name="image" required />
+                <input type="file" id="defaultForm-file" class="form-control validate" name="teacherImage" required />
               </div>
 
               <div class="md-form mb-3">
@@ -191,11 +187,6 @@
               <div class="md-form mb-3">
                 <label data-error="wrong" data-success="right" for="defaultForm-email">Name:</label>
                 <input type="text" id="defaultForm-email" class="form-control validate" name="name" required />
-              </div>
-
-              <div class="md-form mb-4">
-                <label data-error="wrong" data-success="right" for="defaultForm-pass">Description:</label>
-                <input type="text" id="defaultForm-pass" class="form-control validate" name="description" required />
               </div>
 
               <div class="md-form mb-4">
@@ -240,11 +231,6 @@
               <div class="md-form mb-3">
                 <label data-error="wrong" data-success="right" for="defaultForm-email">Name:</label>
                 <input type="text" id="defaultForm-email" class="form-control validate" name="name" required />
-              </div>
-
-              <div class="md-form mb-4">
-                <label data-error="wrong" data-success="right" for="defaultForm-pass">Description:</label>
-                <input type="text" id="defaultForm-pass" class="form-control validate" name="description" required />
               </div>
 
               <div class="md-form mb-4">

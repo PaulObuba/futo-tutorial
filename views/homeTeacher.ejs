@@ -1,147 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Custom Style Link -->
-    <link rel="stylesheet" href="/css/style.css" />
 
-    <!-- teacher Style link -->
-    <link rel="stylesheet" href="/css/teacher.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Custom Style Link -->
+  <link rel="stylesheet" href="/css/style.css" />
 
-    <!-- Font awesome link -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
+  <!-- teacher Style link -->
+  <link rel="stylesheet" href="/css/teacher.css" />
 
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
+  <!-- Font awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 
-    <title>FUTO</title>
-  </head>
-  <body>
-    <!-- Navigation Section -->
-    <section class="nav-bar">
-      <div class="logo">
-        <a href="/home">
-          <img src="/images/logo.png " alt="logo" />
-        </a>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+  <title>FUTO</title>
+</head>
+
+<body>
+  <!-- Navigation Section -->
+  <section class="nav-bar">
+    <div class="logo">
+      <a href="/home">
+        <img src="/images/logo.png " alt="logo" />
+      </a>
+    </div>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+      <ul class="nav-left">
+        <li><a href="/home"> Home </a></li>
+        <li><a href="/courses"> Courses </a></li>
+        <li><a href="/events"> Event </a></li>
+        <li><a href="/students"> Students </a></li>
+        <li><a href="/teachers"> Teachers </a></li>
+      </ul>
+      <ul class="nav-right">
+        <li>
+          <a href="#">
+            <i class="fa fa-bell"><span class="red"></span></i>
+          </a>
+        </li>
+        <li><a href="/"> LogOut </a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <!-- Hero Section -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="hero-section" style="
+              background-image: url('https://www.shutterstock.com/image-photo/happy-mixed-raced-black-female-260nw-2007207017.jpg');
+            ">
+          <div class="overlay"></div>
+          <div class="hero-content">
+            <p class="hero-text1">Better education for better</p>
+            <h1>Civil Engineers</h1>
+            <p class="hero-text2">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
+              debitis? Recusandae odit facilis autem sint, laboriosam vero
+              perspiciatis necessitatibus fugiat, sapiente quos quibusdam
+              iusto, corrupti nihil earum dolor accusamu
+            </p>
+            <div>
+              <button class="btn">Learn more</button>
+            </div>
+          </div>
+        </div>
       </div>
+      <div class="swiper-slide">
+        <div class="hero-section" style="
+              background-image: url('https://i.guim.co.uk/img/media/6909bc33c38ea797d8d52cd681ff31bd28dd95ba/0_45_5000_3000/master/5000.jpg?width=1200&quality=85&auto=format&fit=max&s=b2d486ce383e6bae0f44d7a010278f0e');
+            ">
+          <div class="overlay"></div>
+          <div class="hero-content">
+            <h1>Federal University <br />of Technology Owerri</h1>
+            <p class="hero-text2">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
+              debitis? Recusandae odit facilis autem sint, laboriosam vero
+              perspiciatis necessitatibus fugiat, sapiente quos quibusdam
+              iusto, corrupti nihil earum dolor accusamu
+            </p>
+            <div>
+              <button class="btn">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="hero-section" style="
+              background-image: url('https://imageio.forbes.com/specials-images/imageserve/621525295c388b8c01a869a8/Frustrated-elementary-teacher/960x0.jpg?format=jpg&width=960');
+            ">
+          <div class="overlay"></div>
+          <div class="hero-content">
+            <h1>Federal University <br />of Technology Owerri</h1>
+            <p class="hero-text2">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
+              debitis? Recusandae odit facilis autem sint, laboriosam vero
+              perspiciatis necessitatibus fugiat, sapiente quos quibusdam
+              iusto, corrupti nihil earum dolor accusamu
+            </p>
+            <div>
+              <button class="btn">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="hero-section" style="
+              background-image: url('https://marvel-b1-cdn.bc0a.com/f00000000026007/resilienteducator.com/wp-content/uploads/2014/11/math-teacher.jpg');
+            ">
+          <div class="overlay"></div>
+          <div class="hero-content">
+            <h1>Federal University <br />of Technology Owerri</h1>
+            <p class="hero-text2">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
+              debitis? Recusandae odit facilis autem sint, laboriosam vero
+              perspiciatis necessitatibus fugiat, sapiente quos quibusdam
+              iusto, corrupti nihil earum dolor accusamu
+            </p>
+            <div>
+              <button class="btn">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <div id="menu-btn" class="fas fa-bars"></div>
+  <!-- SECTION 2 -->
+  <section class="sec-2">
+    <h2 class="sec-h2">Depertmental Lecturals</h2>
+    <p class="text">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, nam
+      pariatur impedit consequuntur architecto tempore suscipit eligendi,
+      neque totam deserunt saepe placeat consectetur. Esse quidem beatae eaque
+      nobis, minima aperiam. Reiciendis dolore praesentium quaerat ad optio,
+      incidunt labore voluptate dicta possimus totam rem laudantium sint.
+    </p>
+  </section>
 
-      <nav class="navbar">
-        <ul class="nav-left">
-          <li><a href="/home"> Home </a></li>
-          <li><a href="/courses"> Courses </a></li>
-          <li><a href="/events"> Event </a></li>
-          <li><a href="/students"> Students </a></li>
-          <li><a href="/teachers"> Teachers </a></li>
-        </ul>
-        <ul class="nav-right">
-          <li>
-            <a href="#">
-              <i class="fa fa-bell"><span class="red"></span></i>
-            </a>
-          </li>
-          <li><a href="/"> LogOut </a></li>
-        </ul>
-      </nav>
-    </section>
+  <!-- Counter Section -->
+  <section class="counter-section">
+    <div class="card-div">
+      <div class="card">
+        <i class="fa fa-graduation-cap"></i>
+        <div class="card-content">
+          <p class="number">160+</p>
+          <p class="text">Courses</p>
+        </div>
+      </div>
+      <div class="card">
+        <i class="fa fa-user"></i>
+        <div>
+          <p class="number">160+</p>
+          <p class="text">Students</p>
+        </div>
+      </div>
+      <div class="card">
+        <i class="fa fa-chalkboard-user"></i>
+        <div>
+          <p class="number">160+</p>
+          <p class="text">Teachers</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <div class="swiper mySwiper">
+  <!-- Lecturals -->
+  <section class="teachers-section">
+    <h2 class="sec-h2">Lecturals</h2>
+
+    <div class="swiper studentSwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="https://futo.edu.ng/wp-content/uploads/2022/02/8th-Substantive-Vice-Chancellor.jpeg" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <% teachers.forEach(teacher=> { %>
+          <div class="swiper-slide">
+            <div class="teacher">
+              <img src=" <%- teacher.image %>" alt="" />
+              <div class="content">
+                <span> <%- teacher.title %></span>
+                <h3> <%- teacher.name %></h3>
+                <div class="share">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fab fa-twitter"></a>
+                  <a href="#" class="fab fa-pinterest"></a>
+                  <a href="#" class="fab fa-linkedin"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% }) %>
+          
+      </div>
+    </div>
+
+    <div class="swiper studentSwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <div
-            class="hero-section"
-            style="
-              background-image: url('https://www.shutterstock.com/image-photo/happy-mixed-raced-black-female-260nw-2007207017.jpg');
-            "
-          >
-            <div class="overlay"></div>
-            <div class="hero-content">
-              <p class="hero-text1">Better education for better</p>
-              <h1>Civil Engineers</h1>
-              <p class="hero-text2">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
-                debitis? Recusandae odit facilis autem sint, laboriosam vero
-                perspiciatis necessitatibus fugiat, sapiente quos quibusdam
-                iusto, corrupti nihil earum dolor accusamu
-              </p>
-              <div>
-                <button class="btn">Learn more</button>
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
               </div>
             </div>
           </div>
         </div>
         <div class="swiper-slide">
-          <div
-            class="hero-section"
-            style="
-              background-image: url('https://i.guim.co.uk/img/media/6909bc33c38ea797d8d52cd681ff31bd28dd95ba/0_45_5000_3000/master/5000.jpg?width=1200&quality=85&auto=format&fit=max&s=b2d486ce383e6bae0f44d7a010278f0e');
-            "
-          >
-            <div class="overlay"></div>
-            <div class="hero-content">
-              <h1>Federal University <br />of Technology Owerri</h1>
-              <p class="hero-text2">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
-                debitis? Recusandae odit facilis autem sint, laboriosam vero
-                perspiciatis necessitatibus fugiat, sapiente quos quibusdam
-                iusto, corrupti nihil earum dolor accusamu
-              </p>
-              <div>
-                <button class="btn">Learn more</button>
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
               </div>
             </div>
           </div>
         </div>
         <div class="swiper-slide">
-          <div
-            class="hero-section"
-            style="
-              background-image: url('https://imageio.forbes.com/specials-images/imageserve/621525295c388b8c01a869a8/Frustrated-elementary-teacher/960x0.jpg?format=jpg&width=960');
-            "
-          >
-            <div class="overlay"></div>
-            <div class="hero-content">
-              <h1>Federal University <br />of Technology Owerri</h1>
-              <p class="hero-text2">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
-                debitis? Recusandae odit facilis autem sint, laboriosam vero
-                perspiciatis necessitatibus fugiat, sapiente quos quibusdam
-                iusto, corrupti nihil earum dolor accusamu
-              </p>
-              <div>
-                <button class="btn">Learn more</button>
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
               </div>
             </div>
           </div>
         </div>
         <div class="swiper-slide">
-          <div
-            class="hero-section"
-            style="
-              background-image: url('https://marvel-b1-cdn.bc0a.com/f00000000026007/resilienteducator.com/wp-content/uploads/2014/11/math-teacher.jpg');
-            "
-          >
-            <div class="overlay"></div>
-            <div class="hero-content">
-              <h1>Federal University <br />of Technology Owerri</h1>
-              <p class="hero-text2">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
-                debitis? Recusandae odit facilis autem sint, laboriosam vero
-                perspiciatis necessitatibus fugiat, sapiente quos quibusdam
-                iusto, corrupti nihil earum dolor accusamu
-              </p>
-              <div>
-                <button class="btn">Learn more</button>
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
               </div>
             </div>
           </div>
@@ -149,706 +401,291 @@
       </div>
     </div>
 
-    <!-- SECTION 2 -->
-    <section class="sec-2">
-      <h2 class="sec-h2">Depertmental Lecturals</h2>
-      <p class="text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, nam
-        pariatur impedit consequuntur architecto tempore suscipit eligendi,
-        neque totam deserunt saepe placeat consectetur. Esse quidem beatae eaque
-        nobis, minima aperiam. Reiciendis dolore praesentium quaerat ad optio,
-        incidunt labore voluptate dicta possimus totam rem laudantium sint.
+    <div class="swiper studentSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="teacher">
+            <img src="/images/pic-1.png" alt="" />
+            <div class="content">
+              <span>expert trainer</span>
+              <h3>john mark</h3>
+              <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-sec1">
+      <p>
+        Our School is ranked "B" <br />
+        by the Federal Department of Education.
       </p>
-    </section>
-
-    <!-- Counter Section -->
-    <section class="counter-section">
-      <div class="card-div">
-        <div class="card">
-          <i class="fa fa-graduation-cap"></i>
-          <div class="card-content">
-            <p class="number">160+</p>
-            <p class="text">Courses</p>
-          </div>
-        </div>
-        <div class="card">
-          <i class="fa fa-user"></i>
-          <div>
-            <p class="number">160+</p>
-            <p class="text">Students</p>
-          </div>
-        </div>
-        <div class="card">
-          <i class="fa fa-chalkboard-user"></i>
-          <div>
-            <p class="number">160+</p>
-            <p class="text">Teachers</p>
-          </div>
-        </div>
+      <button>More Info</button>
+    </div>
+    <div class="footer-sec2">
+      <div class="footer-logo">
+        <a href="#">
+          <img src="/images/logo.png" alt="logo" />
+        </a>
       </div>
-    </section>
-
-    <!-- Lecturals -->
-    <section class="teachers-section">
-      <h2 class="sec-h2">Lecturals</h2>
-
-      <div class="swiper studentSwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img
-                src="https://futo.edu.ng/wp-content/uploads/2022/02/8th-Substantive-Vice-Chancellor.jpeg"
-                alt=""
-              />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper studentSwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper studentSwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher">
-              <img src="/images/pic-1.png" alt="" />
-              <div class="content">
-                <span>expert trainer</span>
-                <h3>john mark</h3>
-                <div class="share">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-pinterest"></a>
-                  <a href="#" class="fab fa-linkedin"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="footer-sec1">
-        <p>
-          Our School is ranked "B" <br />
-          by the Federal Department of Education.
+      <div class="foot-links">
+        <h3 class="foot-title">Contact Us</h3>
+        <p class="foot-text">
+          2011 Bienville Street <br />
+          New Orleans, LA 70112
         </p>
-        <button>More Info</button>
-      </div>
-      <div class="footer-sec2">
-        <div class="footer-logo">
-          <a href="#">
-            <img src="/images/logo.png" alt="logo" />
-          </a>
-        </div>
-        <div class="foot-links">
-          <h3 class="foot-title">Contact Us</h3>
-          <p class="foot-text">
-            2011 Bienville Street <br />
-            New Orleans, LA 70112
-          </p>
-          <p class="foot-text">
-            Phone: (504) 324-7061 <br />
-            Fax: (504) 459-2602
-          </p>
-        </div>
-        <div>
-          <h3 class="foot-title">Quick Links</h3>
-          <a href="#"> Home </a>
-          <a href="#"> Courses </a>
-          <a href="#"> Events </a>
-          <a href="#"> Students </a>
-          <a href="#"> Teachers </a>
-        </div>
-        <div>
-          <h3 class="foot-title">Social Links</h3>
-          <a href="#"> Facebook </a>
-          <a href="#"> LinkedIn </a>
-          <a href="#"> Instagram </a>
-          <a href="#"> Twitter </a>
-          <a href="#"> WhatsApp </a>
-        </div>
-      </div>
-      <div class="footer-sec3">
-        <div class="social-links">
-          <h4>Social Links :</h4>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-        <p>
-          Federal University of Technology Owerri | Copyright
-          2023
+        <p class="foot-text">
+          Phone: (504) 324-7061 <br />
+          Fax: (504) 459-2602
         </p>
       </div>
-      <div class="footer-sec4">
-        <div class="overlay"></div>
-        <h3>Belong to the best Department</h3>
-        <p>
-          Federal University of Technology Owerri interested in exploring
-          the fields of science, technology, engineering, and math.
-        </p>
+      <div>
+        <h3 class="foot-title">Quick Links</h3>
+        <a href="#"> Home </a>
+        <a href="#"> Courses </a>
+        <a href="#"> Events </a>
+        <a href="#"> Students </a>
+        <a href="#"> Teachers </a>
       </div>
-    </footer>
+      <div>
+        <h3 class="foot-title">Social Links</h3>
+        <a href="#"> Facebook </a>
+        <a href="#"> LinkedIn </a>
+        <a href="#"> Instagram </a>
+        <a href="#"> Twitter </a>
+        <a href="#"> WhatsApp </a>
+      </div>
+    </div>
+    <div class="footer-sec3">
+      <div class="social-links">
+        <h4>Social Links :</h4>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <p>
+        Federal University of Technology Owerri | Copyright
+        2023
+      </p>
+    </div>
+    <div class="footer-sec4">
+      <div class="overlay"></div>
+      <h3>Belong to the best Department</h3>
+      <p>
+        Federal University of Technology Owerri interested in exploring
+        the fields of science, technology, engineering, and math.
+      </p>
+    </div>
+  </footer>
 
-    <!-- Initialize Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Student Swiper -->
-    <script>
-      var swiper = new Swiper(".studentSwiper", {
-        spaceBetween: 30,
-        autoplay: {
-          delay: 2000,
-          disableOnInteraction: false,
+  <!-- Student Swiper -->
+  <script>
+    var swiper = new Swiper(".studentSwiper", {
+      spaceBetween: 30,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      grabCursor: true,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
         },
-        grabCursor: true,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+        550: {
+          slidesPerView: 2,
         },
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-          },
-          550: {
-            slidesPerView: 2,
-          },
-          791: {
-            slidesPerView: 3,
-          },
+        791: {
+          slidesPerView: 3,
         },
-      });
-    </script>
+      },
+    });
+  </script>
 
-    <!-- Custom JS link -->
-    <script src="./js/script.js"></script>
-  </body>
+  <!-- Custom JS link -->
+  <script src="./js/script.js"></script>
+</body>
+
 </html>
