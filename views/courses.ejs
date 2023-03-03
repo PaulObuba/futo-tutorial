@@ -170,11 +170,11 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form method="post" action="./courses" enctype="multipart/form-data">
+          <for method="post" action="./courses" enctype="multipart/form-data">
             <div class="modal-body mx-3">
               <div class="md-form mb-3">
                 <label data-error="wrong" data-success="right" for="defaultForm-email">Image:</label>
-                <input type="file" class="form-control validate" name="courseImage" required />
+                <input type="file" class="form-control validate" name="courseImage" value="" required />
               </div>
 
               <div class="md-form mb-3">
@@ -218,12 +218,12 @@
 
               <div class="md-form mb-3">
                 <label data-error="wrong" data-success="right" for="defaultForm-email">Name:</label>
-                <input type="text" class="form-control validate" name="title" required />
+                <input type="text" class="form-control validate" name="title" value="" required />
               </div>
 
               <div class="md-form mb-4">
-                <label data-error="wrong" data-success="right" for="defaultForm-pass">Description:</label>
-                <textarea type="password" class="form-control validate" name="description" required /></textarea>
+                <label data-error="wrong" data-success="right" for="editCourse">Description:</label>
+                <textarea type="password" id="editCourse" class="form-control validate" name="description" value="" required /></textarea>
               </div>
             </div>
             <div class="modal-footer d-flex justify-content-center">

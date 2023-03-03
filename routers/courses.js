@@ -85,7 +85,7 @@ router.get("/:id", (req, res, next) => {
 });
 
 // Update Data
-router.post("/edit/:id", (req, res) => {
+router.post("/edit/:id", upload.single("courseImage"), (req, res) => {
   Courses.findByIdAndUpdate(
     { _id: req.params.id },
     req.body,

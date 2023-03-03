@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
+const { Notification } = require('../models/notification');
 
-router.get('/', (req, res) => {
-   res.render('homeNotification')
+router.get('/', async (req, res) => {
+   const notifications = await Notification.find();
+
+   res.render('homeNotification', { notifications })
 });
 
 
