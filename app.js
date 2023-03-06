@@ -2,12 +2,18 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 
-
 require("dotenv/config");
 const cors = require("cors");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
-const session = require('express-session')
+const session = require("express-session");
+const MongoDBSession = require("connect-mongodb-session")(session);
+
+// MongoDBSession
+const store = new MongoDBSession({
+  uri: process.env.MONGOOSE_CONNECTION,
+  collection: "mySessions",
+});
 
 app.set("view engine", "ejs");
 
@@ -18,13 +24,16 @@ app.use(express.json());
 app.use(bodyParser.urlencoded());
 app.use(morgan("tiny"));
 app.use(express.static("public"));
-app.use('/uploads', express.static('uploads'));
-app.use(session({
-  secret: process.env.SESSION_SECRET,
-  cookie: {
-    sameSite: 'strict'
-  }
-}))
+app.use("/uploads", express.static("uploads"));
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: store,
+  })
+);
+
 
 // Import Routers
 const loginRouter = require("./routers/login");

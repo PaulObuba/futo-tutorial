@@ -1,10 +1,11 @@
 const express = require("express");
 const router = express.Router();
+const isAuth = require('../is-auth');
 
 const { Notification } = require("../models/notification");
 
 // Get Data
-router.get("/", async (req, res) => {
+router.get("/", isAuth, async (req, res) => {
   const notifications = await Notification.find();
 
   if (!notifications) {

@@ -39,6 +39,7 @@
   border: 1px solid gray;
   border-radius: 5px;
   margin-bottom: 1.5rem;
+  opacity: 0.6;
 }
 
 .login form .input:nth-child(2) {

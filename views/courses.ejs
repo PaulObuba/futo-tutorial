@@ -170,7 +170,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <for method="post" action="./courses" enctype="multipart/form-data">
+          <form method="post" action="./courses" enctype="multipart/form-data">
             <div class="modal-body mx-3">
               <div class="md-form mb-3">
                 <label data-error="wrong" data-success="right" for="defaultForm-email">Image:</label>
@@ -188,9 +188,9 @@
               </div>
             </div>
             <div class="modal-footer d-flex justify-content-center">
-              <input class="btn" data-target="#modalLoginForm" type="submit" value="Add">
+              <input class="btn" data-target="#modalLoginForm" type="submit" value="Add" />
             </div>
-          </form>
+            </form>
         </div>
       </div>
     </div>
@@ -223,7 +223,8 @@
 
               <div class="md-form mb-4">
                 <label data-error="wrong" data-success="right" for="editCourse">Description:</label>
-                <textarea type="password" id="editCourse" class="form-control validate" name="description" value="" required /></textarea>
+                <textarea type="password" id="editCourse" class="form-control validate" name="description" value=""
+                  required /></textarea>
               </div>
             </div>
             <div class="modal-footer d-flex justify-content-center">
@@ -251,7 +252,8 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancle</button>
-            <button type="button" class="btn btn-danger"> <a href="" class="deleteFromDB" style="color: white;"> Delete </a> </button>
+            <button type="button" class="btn btn-danger"> <a href="" class="deleteFromDB" style="color: white;"> Delete
+              </a> </button>
           </div>
         </div>
       </div>

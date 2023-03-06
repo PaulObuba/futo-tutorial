@@ -4,24 +4,16 @@ const router = express.Router();
 const { UserLogin } = require("../models/userLogin");
 const { AdminLogin } = require("../models/adminLogin");
 
+
+
 // Get Data
 router.get("/", async (req, res) => {
-  if (req.session.authorized) {
-    res.render("home", { username: req.session.loginAsUser.username });
-  } else {
-    res.render("login");
-  }
-
-  // res.send();
+  res.render("login");
 });
 
 // Post Data
 router.post("/", async (req, res) => {
   const { username, password } = req.body;
-
-  if (!username || !password) {
-    return res.status(500).json({ error: "Please add all the fields" });
-  }
 
   //  Check if User Or Admin login exist
   const loginAsUser = await UserLogin.findOne({
@@ -34,12 +26,10 @@ router.post("/", async (req, res) => {
   });
 
   if (loginAsUser) {
-    req.session.loginAsUser = loginAsUser;
-    req.session.authorized = true;
+    req.session.isAuth = true;
     res.redirect("home");
   } else if (loginAsAdmin) {
-    req.session.loginAsAdmin = loginAsAdmin;
-    req.session.authorized = true;
+    req.session.isAuth = true;
     res.redirect("/api/v1/admin");
   } else {
     res.redirect("/");
@@ -47,10 +37,13 @@ router.post("/", async (req, res) => {
 });
 
 // ADD USER
-// router.post("/user", (req, res) => {
+// router.post("/user", async (req, res) => {
+//   const { username, password } = req.body;
+//   const hashedPsw = await bcrypt.hash(password, 10)
+
 //   const user = new UserLogin({
-//     username: req.body.username,
-//     password: req.body.password,
+//     username,
+//     password: hashedPsw,
 //   });
 //   user
 //     .save()
