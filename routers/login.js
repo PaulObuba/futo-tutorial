@@ -6,18 +6,12 @@ const { AdminLogin } = require("../models/adminLogin");
 
 // Get Data
 router.get("/", async (req, res) => {
-  const users = await UserLogin.find();
-  const admin = await AdminLogin.find();
-
-  if (!users) {
-    res.status(500).json({ success: false });
+  if (req.session.authorized) {
+    res.render("home", { username: req.session.loginAsUser.username });
+  } else {
+    res.render("login");
   }
 
-  if (!admin) {
-    res.status(500).json({ success: false });
-  }
-
-  res.render("login", { users });
   // res.send();
 });
 
@@ -28,8 +22,8 @@ router.post("/", async (req, res) => {
   if (!username || !password) {
     return res.status(500).json({ error: "Please add all the fields" });
   }
-  
-//  Check if User Or Admin login exist
+
+  //  Check if User Or Admin login exist
   const loginAsUser = await UserLogin.findOne({
     username: username,
     password: password,
@@ -40,8 +34,12 @@ router.post("/", async (req, res) => {
   });
 
   if (loginAsUser) {
+    req.session.loginAsUser = loginAsUser;
+    req.session.authorized = true;
     res.redirect("home");
   } else if (loginAsAdmin) {
+    req.session.loginAsAdmin = loginAsAdmin;
+    req.session.authorized = true;
     res.redirect("/api/v1/admin");
   } else {
     res.redirect("/");

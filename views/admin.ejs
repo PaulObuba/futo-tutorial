@@ -22,7 +22,6 @@
 </head>
 
 <body>
-  <div class="main-container">
 
     <!-- LEFT SECTION STARTS -->
     <div class="left-section">
@@ -102,7 +101,7 @@
 
     <!-- RIGHT SECTION STARTS -->
 
-    <div class="table-container">
+    <div class="right-section">
       <div class="admin-head">
         14 may 20215
         <a class="btn" data-toggle="modal" data-target="#logoutModal"> Logout </a>
@@ -119,7 +118,9 @@
             <div class="icon">
               <i class="fa-brands fa-discourse color1"></i>
               <div>
-                <p class="num">120</p>
+                <p class="num">
+                  <%- courses.length %>
+                </p>
                 <p class="txt">Reg</p>
               </div>
             </div>
@@ -129,7 +130,9 @@
             <div class="icon">
               <i class="fa fa-list color2"></i>
               <div>
-                <p class="num">120</p>
+                <p class="num">
+                  <%- events.length %>
+                </p>
                 <p class="txt">Reg</p>
               </div>
             </div>
@@ -139,7 +142,9 @@
             <div class="icon">
               <i class="fa-sharp fa-solid fa-street-view color3"></i>
               <div>
-                <p class="num">120</p>
+                <p class="num">
+                  <%- students.length %>
+                </p>
                 <p class="txt">Reg</p>
               </div>
             </div>
@@ -149,7 +154,9 @@
             <div class="icon">
               <i class="fa-solid fa-person-chalkboard color4"></i>
               <div>
-                <p class="num">120</p>
+                <p class="num">
+                  <%- teachers.length %>
+                </p>
                 <p class="txt">Reg</p>
               </div>
             </div>
@@ -159,11 +166,13 @@
             <div class="icon">
               <i class="fa-solid fa-bell color5"></i>
               <div>
-                <p class="num">120</p>
+                <p class="num">
+                  <%- notifications.length %>
+                </p>
                 <p class="txt">Reg</p>
               </div>
             </div>
-            <p class="text"> Notification</p>
+            <p class="text"> Notifications </p>
           </div>
         </div>
       </div>
@@ -258,8 +267,8 @@
               <div class="md-form mb-4">
                 <label data-error="wrong" data-success="right" for="password">Login Password:</label>
                 <div id="input-div">
-                  <input type="password" id="password" placeholder="Reset Password" class="password2 form-control validate"
-                    name="password" required />
+                  <input type="password" id="password" placeholder="Reset Password"
+                    class="password2 form-control validate" name="password" required />
                   <i class="fa fa-eye-slash eye2" onclick="adminEyeToggler()"></i>
                 </div>
               </div>
@@ -273,8 +282,6 @@
     </div>
     <!-- Edit form Modal popup ends -->
 
-
-  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -298,7 +305,7 @@
     const reset = document.querySelector('.reset');
 
     // User Password Eye Toggler
-     const userEyeToggler = () => {
+    const userEyeToggler = () => {
       eye.classList.toggle("fa-eye");
 
       if (eye.classList.contains("fa-eye")) {
@@ -309,7 +316,7 @@
     };
 
     // Admin Password Eye Toggler
-     const adminEyeToggler = () => {
+    const adminEyeToggler = () => {
       eye2.classList.toggle("fa-eye");
 
       if (eye2.classList.contains("fa-eye")) {

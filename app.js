@@ -1,11 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const bodyParser = require("body-parser");
+
 
 require("dotenv/config");
 const cors = require("cors");
 const morgan = require("morgan");
+const bodyParser = require("body-parser");
+const session = require('express-session')
 
 app.set("view engine", "ejs");
 
@@ -17,6 +19,12 @@ app.use(bodyParser.urlencoded());
 app.use(morgan("tiny"));
 app.use(express.static("public"));
 app.use('/uploads', express.static('uploads'));
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  cookie: {
+    sameSite: 'strict'
+  }
+}))
 
 // Import Routers
 const loginRouter = require("./routers/login");
