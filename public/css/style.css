@@ -215,14 +215,15 @@ section {
 }
 
 .nav-bar nav ul .red {
-  width: 0.8rem;
-  height: 0.8rem;
+  font-size: 0.6rem;
+  font-weight: 700;
   border-radius: 50%;
   background-color: red;
+  padding: 0.3rem;
 
   position: absolute;
   top: -0.1rem;
-  right: -0.2rem;
+  right: -0.3rem;
 }
 
 .nav-bar nav ul li a {
@@ -777,6 +778,19 @@ footer .footer-sec4 {
     border-bottom: 1px solid var(--prim-color);
     background-color: var(--light-white);
   }
+  
+.nav-bar nav ul .red {
+  font-size: 0.6rem;
+  font-weight: 700;
+  border-radius: 50%;
+  color: white;
+  background-color: red;
+  padding: 0.3rem;
+
+  position: absolute;
+  top: -0.1rem;
+  right: -0.4rem;
+}
 
   
 .nav-bar::after {

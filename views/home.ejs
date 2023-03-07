@@ -41,10 +41,16 @@
         <ul class="nav-right">
           <li>
             <a href="/notification">
-              <i class="fa fa-bell"><span class="red"></span></i>
+              <i class="fa fa-bell"><span class="red">
+                  <% if (notification.length > 9) { %>
+                    9+
+                  <% } else { %>
+                  <%- notification.length %>
+                  <% }%>
+                </span></i>
             </a>
           </li>
-          <li><a href="/" data-toggle="modal" data-target="#logoutModal"> LogOut </a></li>
+          <li><a href="/logout" data-toggle="modal" data-target="#logoutModal"> LogOut </a></li>
         </ul>
       </nav>
     </section>
@@ -217,8 +223,7 @@
             </p>
           </div>
           <div class="swiper-slide course">
-            <img
-              src="https://elearningindustry.com/wp-content/uploads/2015/10/learning-technologies-fundamentals-part-1.jpg" />
+            <img src="https://elearningindustry.com/wp-content/uploads/2015/10/learning-technologies-fundamentals-part-1.jpg" />
             <h3>Engineering</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -236,8 +241,7 @@
             </p>
           </div>
           <div class="swiper-slide course">
-            <img
-              src="https://img.freepik.com/premium-photo/using-online-connect-technology-business-education-communication_1421-3950.jpg" />
+            <img src="https://img.freepik.com/premium-photo/using-online-connect-technology-business-education-communication_1421-3950.jpg" />
             <h3>Engineering</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -255,8 +259,7 @@
             </p>
           </div>
           <div class="swiper-slide course">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdo9vEE0xHhIlMbMwsw-k3SXhwUnf4id23RA&usqp=CAU" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdo9vEE0xHhIlMbMwsw-k3SXhwUnf4id23RA&usqp=CAU" />
             <h3>Engineering</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -285,8 +288,7 @@
       <div class="swiper courseMateSwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide course">
-            <img
-              src="https://media.istockphoto.com/id/1351445530/photo/african-student-sitting-in-classroom.jpg?s=612x612&w=0&k=20&c=1ICaZ03iFLzDmxfBkfDkmBGSgj1SDEpsM3eSDgB1KBk=" />
+            <img src="https://media.istockphoto.com/id/1351445530/photo/african-student-sitting-in-classroom.jpg?s=612x612&w=0&k=20&c=1ICaZ03iFLzDmxfBkfDkmBGSgj1SDEpsM3eSDgB1KBk=" />
             <h3>Name/ nick name</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -294,8 +296,7 @@
             </p>
           </div>
           <div class="swiper-slide course">
-            <img
-              src="https://media.istockphoto.com/id/883657418/photo/cant-wait-to-get-the-semester-started.jpg?b=1&s=170667a&w=0&k=20&c=eGTBavaKBpo4JYp3pQi1YoMM7sKlR_LxysWf9QtIEKY=" />
+            <img src="https://media.istockphoto.com/id/883657418/photo/cant-wait-to-get-the-semester-started.jpg?b=1&s=170667a&w=0&k=20&c=eGTBavaKBpo4JYp3pQi1YoMM7sKlR_LxysWf9QtIEKY=" />
             <h3>Name/ nick name</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -303,8 +304,7 @@
             </p>
           </div>
           <div class="swiper-slide course">
-            <img
-              src="https://media.istockphoto.com/id/1006213126/photo/beautiful-young-woman-with-books-and-digital-tablet-standing-at-window-in-campus.jpg?s=612x612&w=0&k=20&c=KIUPV1SrnQDVxq19Li7-6b7ncSpdm9iPq4aNKjIzqcA=" />
+            <img src="https://media.istockphoto.com/id/1006213126/photo/beautiful-young-woman-with-books-and-digital-tablet-standing-at-window-in-campus.jpg?s=612x612&w=0&k=20&c=KIUPV1SrnQDVxq19Li7-6b7ncSpdm9iPq4aNKjIzqcA=" />
             <h3>Name/ nick name</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -312,8 +312,7 @@
             </p>
           </div>
           <div class="swiper-slide course">
-            <img
-              src="https://www.smu.edu/-/media/Images/News/2020/Winter/iStock-509916803.jpg?h=666&iar=0&w=1000&hash=611FF3A2A6A50CE710DE06568D8B68AA" />
+            <img src="https://www.smu.edu/-/media/Images/News/2020/Winter/iStock-509916803.jpg?h=666&iar=0&w=1000&hash=611FF3A2A6A50CE710DE06568D8B68AA" />
             <h3>Name/ nick name</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -329,8 +328,7 @@
             </p>
           </div>
           <div class="swiper-slide course">
-            <img
-              src="https://nationalcenter.org/project21/wp-content/uploads/sites/4/2018/06/black-college-student.jpg" />
+            <img src="https://nationalcenter.org/project21/wp-content/uploads/sites/4/2018/06/black-college-student.jpg" />
             <h3>Name/ nick name</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -338,8 +336,7 @@
             </p>
           </div>
           <div class="swiper-slide course">
-            <img
-              src="https://www.blackhistorymonth.org.uk/wp-content/uploads/2021/01/shutterstock_763464100-623x438.jpg" />
+            <img src="https://www.blackhistorymonth.org.uk/wp-content/uploads/2021/01/shutterstock_763464100-623x438.jpg" />
             <h3>Name/ nick name</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

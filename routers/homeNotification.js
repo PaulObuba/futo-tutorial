@@ -5,9 +5,9 @@ const userAuth = require('../login-auth');
 const { Notification } = require('../models/notification');
 
 router.get('/', userAuth, async (req, res) => {
-   const notifications = await Notification.find();
+   const notification = await Notification.find();
 
-   res.render('homeNotification', { notifications })
+   res.render('homeNotification', { notification })
 });
 
 

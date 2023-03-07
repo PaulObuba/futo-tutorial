@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Custom Style Link -->
-<link rel="stylesheet" href="/css/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Custom Style Link -->
+  <link rel="stylesheet" href="/css/style.css" />
 
-<!-- Courses Style link -->
-<link rel="stylesheet" href="/css/courses.css" />
+  <!-- Courses Style link -->
+  <link rel="stylesheet" href="/css/courses.css" />
 
-<!-- Font awesome link -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <!-- Font awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 
-<!-- Link Swiper's CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
-<title>FUTO</title>
+  <title>FUTO</title>
 </head>
 
 <body>
@@ -38,10 +42,16 @@
       <ul class="nav-right">
         <li>
           <a href="/notification">
-            <i class="fa fa-bell"><span class="red"></span></i>
+            <i class="fa fa-bell"><span class="red">
+              <% if (notification.length > 9) { %>
+                9+
+              <% } else { %>
+              <%- notification.length %>
+              <% }%>
+            </span></i>
           </a>
         </li>
-        <li><a href="/"> LogOut </a></li>
+        <li><a href="/logout"> LogOut </a></li>
       </ul>
     </nav>
   </section>

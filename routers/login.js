@@ -6,11 +6,7 @@ const { AdminLogin } = require("../models/adminLogin");
 
 // Get Data
 router.get("/", async (req, res) => {
-  req.session.destroy((err) => {
-    if (err) throw err;
-    // res.redirect("/");
-    res.render("login");
-  });
+  res.render("login");
 });
 
 // Post Data

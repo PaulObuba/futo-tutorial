@@ -42,10 +42,16 @@
       <ul class="nav-right">
         <li>
           <a href="/notification">
-            <i class="fa fa-bell"><span class="red"></span></i>
+            <i class="fa fa-bell"><span class="red">
+              <% if (notification.length > 9) { %>
+                9+
+              <% } else { %>
+              <%- notification.length %>
+              <% }%>
+            </span></i>
           </a>
         </li>
-        <li><a href="/"> LogOut </a></li>
+        <li><a href="/logout"> LogOut </a></li>
       </ul>
     </nav>
   </section>
@@ -267,15 +273,20 @@
 
   <!-- Upcoming Events -->
   <section class="course-mate-section">
-    <h2 class="sec-h2">Upcoming Evnets</h2>
+    <h2 class="sec-h2">Upcoming Events</h2>
     <div class="swiper courseMateSwiper">
       <div class="swiper-wrapper">
 
         <% events.forEach(event => { %>
           <div class="swiper-slide course">
             <div class="time">
-              <p class="date">14</p>
-              <p class="date-string"><span>FEB</span> 23</p>
+              <% let date = event.date %>
+              <% let day = date.getDate(); %>
+              <% let month = date.getMonth(); %>
+              <% let year = date.getFullYear(); %>
+              <% let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]; %>
+              <p class="date"><%- day %></p>
+              <p class="date-string"><span><%- months[month] %></span> <%- year %> </p>
             </div>
             <img src="<%- event.image %>" />
             <h3><%- event.title %></h3>

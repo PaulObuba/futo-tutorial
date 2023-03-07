@@ -34,8 +34,8 @@ app.use(
   })
 );
 
-
 // Import Routers
+const logoutRouter = require("./routers/logout");
 const loginRouter = require("./routers/login");
 const adminRouter = require("./routers/admin");
 const courseRouter = require("./routers/courses");
@@ -54,6 +54,7 @@ const notificationsRouter = require("./routers/homeNotification");
 const api = process.env.API_URL;
 
 // Routes
+app.use("/logout", logoutRouter);
 app.use("/", loginRouter);
 app.use(`${api}/admin`, adminRouter);
 app.use(`${api}/courses`, courseRouter);

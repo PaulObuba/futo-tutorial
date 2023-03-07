@@ -41,7 +41,7 @@ router.get("/", adminAuth, async (req, res) => {
     res.status(500).json({ success: false });
   }
   res.render("events", { events });
-
+console.log(events)
   // res.send(events);
 });
 

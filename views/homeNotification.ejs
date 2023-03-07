@@ -42,10 +42,16 @@
       <ul class="nav-right">
         <li>
           <a href="/notification">
-            <i class="fa fa-bell"><span class="red"></span></i>
+            <i class="fa fa-bell"><span class="red">
+              <% if (notification.length > 9) { %>
+                9+
+              <% } else { %>
+              <%- notification.length %>
+              <% }%>
+            </span></i>
           </a>
         </li>
-        <li><a href="/"> LogOut </a></li>
+        <li><a href="/logout"> LogOut </a></li>
       </ul>
     </nav>
   </section>
@@ -53,7 +59,7 @@
   <div class="main-container">
     <h2 class="sec-h2"> Notifications </h2>
 
-    <% notifications.forEach(notification=> { %>
+    <% notification.forEach(notification=> { %>
       <div class="notification">
         <h3 class="day"> Today </h3>
         <h4 class="title"> <%- notification.title %> </h4>
