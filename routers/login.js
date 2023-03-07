@@ -4,11 +4,13 @@ const router = express.Router();
 const { UserLogin } = require("../models/userLogin");
 const { AdminLogin } = require("../models/adminLogin");
 
-
-
 // Get Data
 router.get("/", async (req, res) => {
-  res.render("login");
+  req.session.destroy((err) => {
+    if (err) throw err;
+    // res.redirect("/");
+    res.render("login");
+  });
 });
 
 // Post Data
@@ -26,10 +28,11 @@ router.post("/", async (req, res) => {
   });
 
   if (loginAsUser) {
-    req.session.isAuth = true;
+    req.session.userAuth = true;
     res.redirect("home");
   } else if (loginAsAdmin) {
-    req.session.isAuth = true;
+    req.session.adminAuth = true;
+    req.session.userAuth = true;
     res.redirect("/api/v1/admin");
   } else {
     res.redirect("/");

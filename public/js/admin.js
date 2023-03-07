@@ -138,3 +138,15 @@ const adminResetPasswordFunction = (e) => {
     .setAttribute("action", `/admin/edit/${id}`);
 };
 // ================================ ADMIN RESET PASSWORD ENDS ==================================>
+
+
+// DATE FUNCTION TO GET CURRENT DATE IN ADMIN HEADER
+const currentDate = document.querySelector('.showDate');
+
+  let date = new Date();
+  let day = date.getDate();
+  let month = date.getMonth();
+  let year = date.getFullYear();
+  let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  currentDate.innerText = `${day} ${months[month]} ${year}`

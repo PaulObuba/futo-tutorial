@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const isAuth = require('../is-auth');
+const adminAuth = require('../admin-auth');
 
 // Configure Multer for Uploading Image File
 const multer = require("multer");
@@ -34,7 +34,7 @@ const upload = multer({
 const { Teachers } = require("../models/teachers");
 
 // Get Data
-router.get("/", isAuth, async (req, res) => {
+router.get("/", adminAuth, async (req, res) => {
   const teachers = await Teachers.find();
 
   if (!teachers) {

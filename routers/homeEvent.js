@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const isAuth = require('../is-auth');
+const userAuth = require('../login-auth');
 
 const { Events } = require('../models/events');
 
-router.get('/', isAuth, async (req, res) => {
+router.get('/', userAuth, async (req, res) => {
    const events = await Events.find();
 
    res.render('homeEvent', { events })

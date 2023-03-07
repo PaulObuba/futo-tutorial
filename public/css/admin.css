@@ -251,7 +251,7 @@
 .admin-head {
   display: flex;
   justify-content: end;
-  align-items: center;
+  align-items: end;
   gap: 1rem;
   color: white;
   background-color: #393939;

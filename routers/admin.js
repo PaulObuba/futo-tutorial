@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const isAuth = require('../is-auth');
+const adminAuth = require('../admin-auth');
 
 const { UserLogin } = require("../models/userLogin");
 const { AdminLogin } = require("../models/adminLogin");
@@ -11,7 +11,7 @@ const { Teachers } = require("../models/teachers");
 const { Notification } = require("../models/notification");
 
 
-router.get("/", isAuth, async (req, res) => {
+router.get("/", adminAuth, async (req, res) => {
   const user = await UserLogin.find();
   const admin = await AdminLogin.find();
   const courses = await Courses.find();
